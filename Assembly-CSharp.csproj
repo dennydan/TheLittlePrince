@@ -56,9 +56,9 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\PlayerController.cs" />
-    <Compile Include="Assets\SimpleAttach.cs" />
-    <Compile Include="Assets\ResetItself.cs" />
+    <Compile Include="Assets\Game\Script\SimpleAttach.cs" />
+    <Compile Include="Assets\Game\Script\PlayerController.cs" />
+    <Compile Include="Assets\Game\Script\ResetItself.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -842,13 +842,13 @@
       <Project>{6C6B4E2D-FD3C-80AF-1AB2-24863EEEEA82}</Project>
       <Name>Unity.XR.Management.Samples.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.XR.Management.Samples.csproj">
-      <Project>{96FA9F32-D0E4-3C63-9972-463BC296F543}</Project>
-      <Name>Unity.XR.Management.Samples</Name>
-    </ProjectReference>
     <ProjectReference Include="SteamVR_Actions.csproj">
       <Project>{12537F7D-1CA6-AEF9-9C3B-A72399DEBCB5}</Project>
       <Name>SteamVR_Actions</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.XR.Management.Samples.csproj">
+      <Project>{96FA9F32-D0E4-3C63-9972-463BC296F543}</Project>
+      <Name>Unity.XR.Management.Samples</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
