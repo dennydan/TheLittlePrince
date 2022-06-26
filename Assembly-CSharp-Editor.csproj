@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>8.0</LangVersion>
+    <LangVersion>9.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{CDA4D678-91F7-D633-9CD5-EEBBC7647432}</ProjectGuid>
+    <ProjectGuid>{F01D50E7-4A43-AEBF-ACE5-8FF16227E0C2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
@@ -22,7 +22,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>Temp\Bin\Debug\</OutputPath>
-    <DefineConstants>UNITY_2021_3_2;UNITY_2021_3;UNITY_2021;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_2021_1_OR_NEWER;UNITY_2021_2_OR_NEWER;UNITY_2021_3_OR_NEWER;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;USE_SEARCH_ENGINE_API;USE_SEARCH_TABLE;USE_SEARCH_MODULE;USE_PROPERTY_DATABASE;USE_SEARCH_EXTENSION_API;SCENE_TEMPLATE_MODULE;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_VIRTUALTEXTURING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_MANAGED_UNITYTLS;INCLUDE_DYNAMIC_GI;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_VIDEO;ENABLE_ACCELERATOR_CLIENT_DEBUGGING;PLATFORM_STANDALONE;TEXTCORE_1_0_OR_NEWER;PLATFORM_STANDALONE_WIN;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_NVIDIA;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_OUT_OF_PROCESS_CRASH_HANDLER;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP;GFXDEVICE_WAITFOREVENT_MESSAGEPUMP;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_4_6;NET_UNITY_4_8;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_LEGACY_INPUT_MANAGER;UNITY_POST_PROCESSING_STACK_V1;UNITY_POST_PROCESSING_STACK_V2;PROBUILDER_FBX_ENABLED;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
+    <DefineConstants>UNITY_2021_3_2;UNITY_2021_3;UNITY_2021;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_2021_1_OR_NEWER;UNITY_2021_2_OR_NEWER;UNITY_2021_3_OR_NEWER;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;USE_SEARCH_ENGINE_API;USE_SEARCH_TABLE;USE_SEARCH_MODULE;USE_PROPERTY_DATABASE;USE_SEARCH_EXTENSION_API;SCENE_TEMPLATE_MODULE;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_VIRTUALTEXTURING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_MANAGED_UNITYTLS;INCLUDE_DYNAMIC_GI;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_VIDEO;ENABLE_ACCELERATOR_CLIENT_DEBUGGING;PLATFORM_STANDALONE;TEXTCORE_1_0_OR_NEWER;PLATFORM_STANDALONE_WIN;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_NVIDIA;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_OUT_OF_PROCESS_CRASH_HANDLER;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP;GFXDEVICE_WAITFOREVENT_MESSAGEPUMP;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_4_6;NET_UNITY_4_8;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_INPUT_SYSTEM;ENABLE_LEGACY_INPUT_MANAGER;UNITY_POST_PROCESSING_STACK_V2;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
@@ -53,55 +53,55 @@
     <UnityVersion>2021.3.2f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
+    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\External\3DGamekit\Scripts\Game\Localization\Editor\TranslatedPhrasesEditor.cs" />
+    <Compile Include="Assets\External\3DGamekit\Packages\DefaultPlayables\LightControl\Editor\LightControlDrawer.cs" />
+    <Compile Include="Assets\External\3DGamekit\Packages\DefaultPlayables\Editor\TimelinePlayableWizard.cs" />
+    <Compile Include="Assets\External\3DGamekit\Packages\DefaultPlayables\ScreenFader\Editor\ScreenFaderDrawer.cs" />
+    <Compile Include="Assets\External\3DGamekit\Packages\DefaultPlayables\TransformTween\Editor\TransformTweenDrawer.cs" />
+    <Compile Include="Assets\External\3DGamekit\Packages\Interactive\Editor\SimpleTranslatorEditor.cs" />
     <Compile Include="Assets\External\3DGamekit\Packages\SimpleSFX\Editor\SimpleFXEditor.cs" />
-    <Compile Include="Assets\External\3DGamekit\Scripts\Game\Localization\Editor\TranslatorEditor.cs" />
-    <Compile Include="Assets\External\3DGamekit\Packages\WorldBuilding\Editor\InstancePainterEditor.Inspector.cs" />
-    <Compile Include="Assets\External\3DGamekit\Packages\Interactive\Editor\SendGameCommandEditor.cs" />
     <Compile Include="Assets\External\3DGamekit\Scripts\Game\Core\Editor\ScenarioControllerEditor.cs" />
+    <Compile Include="Assets\External\3DGamekit\Scripts\Editor\NewSceneCreator.cs" />
+    <Compile Include="Assets\External\3DGamekit\Packages\DefaultPlayables\TimeDilation\Editor\TimeDilationDrawer.cs" />
+    <Compile Include="Assets\External\3DGamekit\Packages\SceneManagement\Editor\DataPersisterEditor.cs" />
+    <Compile Include="Assets\External\3DGamekit\Packages\DefaultPlayables\TextSwitcher\Editor\TextSwitcherDrawer.cs" />
     <Compile Include="Assets\External\3DGamekit\Packages\SceneManagement\Editor\SceneNameDrawer.cs" />
-    <Compile Include="Assets\External\3DGamekit\Scripts\Game\Timeline\MaterialSwitcher\Editor\MaterialSwitcherDrawer.cs" />
-    <Compile Include="Assets\External\3DGamekit\Scripts\Game\Core\Editor\AddObjectiveSubEditor.cs" />
     <Compile Include="Assets\External\3DGamekit\Packages\WorldBuilding\Editor\MegaSmartObjectEditor.cs" />
+    <Compile Include="Assets\External\3DGamekit\Scripts\Game\Core\Editor\AddObjectiveSubEditor.cs" />
+    <Compile Include="Assets\External\3DGamekit\Scripts\Game\Player\Editor\CheckpointGroupEditor.cs" />
+    <Compile Include="Assets\External\3DGamekit\TutorialInfo\Scripts\Editor\ReadmeEditor.cs" />
+    <Compile Include="Assets\External\3DGamekit\Scripts\Editor\CheckpointEditor.cs" />
+    <Compile Include="Assets\External\3DGamekit\Packages\WorldBuilding\Editor\InstancePainterEditor.cs" />
+    <Compile Include="Assets\External\3DGamekit\Packages\SceneManagement\Editor\ParameterSetterDrawer.cs" />
+    <Compile Include="Assets\External\3DGamekit\Scripts\Game\Core\Editor\SubEditor.cs" />
     <Compile Include="Assets\External\3DGamekit\Packages\Interactive\Editor\SimpleTransformerEditor.cs" />
+    <Compile Include="Assets\External\3DGamekit\Scripts\Game\Timeline\SetLocation\Editor\SetLocationDrawer.cs" />
+    <Compile Include="Assets\External\3DGamekit\Packages\SceneManagement\Editor\TransitionStartEditor.cs" />
+    <Compile Include="Assets\External\3DGamekit\Scripts\Game\Timeline\SceneReloader\Editor\SceneReloaderDrawer.cs" />
+    <Compile Include="Assets\External\3DGamekit\Packages\WorldBuilding\Editor\PaletteWizard.cs" />
+    <Compile Include="Assets\External\3DGamekit\Packages\WorldBuilding\Editor\InstancePainterEditor.Inspector.cs" />
+    <Compile Include="Assets\External\3DGamekit\Scripts\Editor\FilterLOD.cs" />
+    <Compile Include="Assets\External\3DGamekit\Packages\WorldBuilding\Editor\InstancePainterEditor.SceneGUI.cs" />
     <Compile Include="Assets\External\3DGamekit\Packages\DefaultPlayables\StandardMaterialEmission\Editor\StandardMaterialEmissionDrawer.cs" />
+    <Compile Include="Assets\External\3DGamekit\Scripts\Game\Helpers\Editor\CameraSettingsEditor.cs" />
+    <Compile Include="Assets\External\3DGamekit\Packages\Interactive\Editor\CommandReceiverEditor.cs" />
+    <Compile Include="Assets\External\3DGamekit\Scripts\Game\Localization\Editor\TranslatedPhrasesEditor.cs" />
+    <Compile Include="Assets\External\3DGamekit\Packages\Interactive\Editor\SendGameCommandEditor.cs" />
+    <Compile Include="Assets\External\3DGamekit\Packages\SimpleSFX\Editor\SynthLayerDrawer.cs" />
+    <Compile Include="Assets\External\3DGamekit\Scripts\Editor\AutoSetQualitySetting.cs" />
+    <Compile Include="Assets\External\3DGamekit\Scripts\Game\Camera\Editor\LayerCullDistancesEditor.cs" />
+    <Compile Include="Assets\External\3DGamekit\Scripts\Game\Localization\Editor\TranslatorEditor.cs" />
+    <Compile Include="Assets\External\3DGamekit\Scripts\Game\Timeline\MaterialSwitcher\Editor\MaterialSwitcherDrawer.cs" />
     <Compile Include="Assets\External\3DGamekit\Scripts\Editor\AddCollidersToHierarchy.cs" />
     <Compile Include="Assets\External\3DGamekit\Scripts\Game\Localization\Editor\PhraseDrawer.cs" />
     <Compile Include="Assets\External\3DGamekit\Scripts\Game\Timeline\TimeMachine\Editor\TimeMachineClipInspector.cs" />
-    <Compile Include="Assets\External\3DGamekit\Scripts\Game\Helpers\Editor\CameraSettingsEditor.cs" />
-    <Compile Include="Assets\External\3DGamekit\Packages\DefaultPlayables\LightControl\Editor\LightControlDrawer.cs" />
-    <Compile Include="Assets\External\3DGamekit\Packages\SimpleSFX\Editor\SynthLayerDrawer.cs" />
-    <Compile Include="Assets\External\3DGamekit\Scripts\Editor\NewSceneCreator.cs" />
-    <Compile Include="Assets\External\3DGamekit\Packages\DefaultPlayables\Editor\TimelinePlayableWizard.cs" />
-    <Compile Include="Assets\External\3DGamekit\Scripts\Game\Timeline\SetLocation\Editor\SetLocationDrawer.cs" />
-    <Compile Include="Assets\External\3DGamekit\Packages\DefaultPlayables\TimeDilation\Editor\TimeDilationDrawer.cs" />
-    <Compile Include="Assets\External\3DGamekit\Scripts\Game\Player\Editor\CheckpointGroupEditor.cs" />
-    <Compile Include="Assets\External\3DGamekit\TutorialInfo\Scripts\Editor\ReadmeEditor.cs" />
-    <Compile Include="Assets\External\3DGamekit\Packages\DefaultPlayables\ScreenFader\Editor\ScreenFaderDrawer.cs" />
-    <Compile Include="Assets\External\3DGamekit\Packages\SceneManagement\Editor\TransitionStartEditor.cs" />
-    <Compile Include="Assets\External\3DGamekit\Packages\SceneManagement\Editor\DataPersisterEditor.cs" />
-    <Compile Include="Assets\External\3DGamekit\Packages\Interactive\Editor\CommandReceiverEditor.cs" />
-    <Compile Include="Assets\External\3DGamekit\Scripts\Editor\CheckpointEditor.cs" />
-    <Compile Include="Assets\External\3DGamekit\Packages\WorldBuilding\Editor\InstancePainterEditor.cs" />
     <Compile Include="Assets\External\3DGamekit\Scripts\Game\Timeline\AudioSnapshot\Editor\AudioSnapshotDrawer.cs" />
-    <Compile Include="Assets\External\3DGamekit\Packages\DefaultPlayables\TextSwitcher\Editor\TextSwitcherDrawer.cs" />
-    <Compile Include="Assets\External\3DGamekit\Scripts\Editor\FilterLOD.cs" />
-    <Compile Include="Assets\External\3DGamekit\Scripts\Game\Timeline\SceneReloader\Editor\SceneReloaderDrawer.cs" />
-    <Compile Include="Assets\External\3DGamekit\Packages\SceneManagement\Editor\ParameterSetterDrawer.cs" />
     <Compile Include="Assets\External\3DGamekit\Packages\Interactive\Editor\TeleporterGizmo.cs" />
     <Compile Include="Assets\External\3DGamekit\Scripts\Game\Player\Editor\PlayerControllerEditor.cs" />
     <Compile Include="Assets\External\3DGamekit\Scripts\Game\Timeline\CutsceneScriptControl\Editor\CutsceneScriptControlDrawer.cs" />
-    <Compile Include="Assets\External\3DGamekit\Packages\WorldBuilding\Editor\PaletteWizard.cs" />
-    <Compile Include="Assets\External\3DGamekit\Scripts\Editor\AutoSetQualitySetting.cs" />
-    <Compile Include="Assets\External\3DGamekit\Scripts\Game\Camera\Editor\LayerCullDistancesEditor.cs" />
-    <Compile Include="Assets\External\3DGamekit\Packages\DefaultPlayables\TransformTween\Editor\TransformTweenDrawer.cs" />
-    <Compile Include="Assets\External\3DGamekit\Packages\Interactive\Editor\SimpleTranslatorEditor.cs" />
-    <Compile Include="Assets\External\3DGamekit\Scripts\Game\Core\Editor\SubEditor.cs" />
     <Compile Include="Assets\External\3DGamekit\Scripts\Editor\ExportTerrain.cs" />
-    <Compile Include="Assets\External\3DGamekit\Packages\WorldBuilding\Editor\InstancePainterEditor.SceneGUI.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -352,6 +352,9 @@
     </Reference>
     <Reference Include="UnityEditor.Graphs">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.2f1\Editor\Data\Managed\UnityEditor.Graphs.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.WebGL.Extensions">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.2f1\Editor\Data\PlaybackEngines\WebGLSupport\UnityEditor.WebGL.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.WindowsStandalone.Extensions">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.2f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
@@ -1016,6 +1019,9 @@
     <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.ProBuilder">
+      <HintPath>Library\ScriptAssemblies\Unity.ProBuilder.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection">
       <HintPath>Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll</HintPath>
     </Reference>
@@ -1040,11 +1046,23 @@
     <Reference Include="Unity.XR.CoreUtils.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.XR.CoreUtils.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Cinemachine">
+      <HintPath>Library\ScriptAssemblies\Cinemachine.dll</HintPath>
+    </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+      <HintPath>Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.XR.Management">
       <HintPath>Library\ScriptAssemblies\Unity.XR.Management.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Flow.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Tilemap.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ProBuilder.AddOns.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.ProBuilder.AddOns.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualStudio.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
@@ -1067,11 +1085,17 @@
     <Reference Include="Unity.XR.Interaction.Toolkit">
       <HintPath>Library\ScriptAssemblies\Unity.XR.Interaction.Toolkit.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.2D.Sprite.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Subsystem.Registration">
       <HintPath>Library\ScriptAssemblies\Unity.Subsystem.Registration.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.VisualScripting.Flow">
-      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
+    <Reference Include="Unity.Postprocessing.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Postprocessing.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ProBuilder.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.ProBuilder.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PlasticSCM.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
@@ -1079,11 +1103,20 @@
     <Reference Include="Unity.XR.OpenXR.Features.OculusQuestSupport">
       <HintPath>Library\ScriptAssemblies\Unity.XR.OpenXR.Features.OculusQuestSupport.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Polybrush.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Polybrush.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.XR.OpenVR.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.XR.OpenVR.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Services.Core">
       <HintPath>Library\ScriptAssemblies\Unity.Services.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.Flow">
+      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Polybrush">
+      <HintPath>Library\ScriptAssemblies\Unity.Polybrush.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Core">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
@@ -1091,11 +1124,17 @@
     <Reference Include="Unity.Services.Core.Analytics">
       <HintPath>Library\ScriptAssemblies\Unity.Services.Core.Analytics.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.XR.LegacyInputHelpers">
-      <HintPath>Library\ScriptAssemblies\UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
+    <Reference Include="Unity.Postprocessing.Runtime">
+      <HintPath>Library\ScriptAssemblies\Unity.Postprocessing.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ProBuilder.AssetIdRemapUtility">
+      <HintPath>Library\ScriptAssemblies\Unity.ProBuilder.AssetIdRemapUtility.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Shared.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.XR.LegacyInputHelpers">
+      <HintPath>Library\ScriptAssemblies\UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
     </Reference>
     <Reference Include="Unity.XR.OpenXR.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.XR.OpenXR.Editor.dll</HintPath>
@@ -1133,99 +1172,63 @@
     <Reference Include="Unity.VisualScripting.State">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.ProBuilder">
-      <HintPath>Library\ScriptAssemblies\Unity.ProBuilder.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.Tilemap.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Polybrush.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Polybrush.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.ProBuilder.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.ProBuilder.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.ProBuilder.AssetIdRemapUtility">
-      <HintPath>Library\ScriptAssemblies\Unity.ProBuilder.AssetIdRemapUtility.dll</HintPath>
-    </Reference>
-    <Reference Include="Cinemachine">
-      <HintPath>Library\ScriptAssemblies\Cinemachine.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Postprocessing.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Postprocessing.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Polybrush">
-      <HintPath>Library\ScriptAssemblies\Unity.Polybrush.dll</HintPath>
-    </Reference>
-    <Reference Include="com.unity.cinemachine.editor">
-      <HintPath>Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.ProBuilder.AddOns.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.ProBuilder.AddOns.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.Sprite.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Postprocessing.Runtime">
-      <HintPath>Library\ScriptAssemblies\Unity.Postprocessing.Runtime.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{650D4DEF-A163-4654-A6BA-4ADB33BFDF22}</Project>
+      <Project>{BF3F2D37-4DBA-D7D1-B3DF-672BFD8A592F}</Project>
       <Name>Assembly-CSharp</Name>
     </ProjectReference>
     <ProjectReference Include="SteamVR_Input_Editor.csproj">
-      <Project>{E7FCCFC8-7875-03A5-792A-0CFED7363CB1}</Project>
+      <Project>{0AAF3B91-513C-684F-2CB0-CF26568AB971}</Project>
       <Name>SteamVR_Input_Editor</Name>
     </ProjectReference>
     <ProjectReference Include="SteamVR_Windows_EditorHelper.csproj">
-      <Project>{E501F012-06FE-8C45-01C9-3F5F056A3C51}</Project>
+      <Project>{06D48679-0AF2-5878-C34E-16BFA6397315}</Project>
       <Name>SteamVR_Windows_EditorHelper</Name>
     </ProjectReference>
     <ProjectReference Include="SteamVR_Editor.csproj">
-      <Project>{FAFAF8D0-7F8F-733C-C0B7-0C66F8797E00}</Project>
+      <Project>{78940D6F-F499-78B3-3D78-BE6037E8E817}</Project>
       <Name>SteamVR_Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="NavMeshComponentsEditor.csproj">
+      <Project>{147591F0-1482-0E09-6E41-787A7E6F81DB}</Project>
+      <Name>NavMeshComponentsEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="NavMeshComponents.csproj">
+      <Project>{FE8552D3-707B-057C-ADD9-6CF1657BE5BD}</Project>
+      <Name>NavMeshComponents</Name>
+    </ProjectReference>
+    <ProjectReference Include="SimpleSFXRuntime.csproj">
+      <Project>{BFC6346C-A570-4352-8A76-1410A4A13A30}</Project>
+      <Name>SimpleSFXRuntime</Name>
+    </ProjectReference>
+    <ProjectReference Include="WorldBuildingRuntime.csproj">
+      <Project>{E2289C88-4060-A7EE-EC41-CC0532FD3FEB}</Project>
+      <Name>WorldBuildingRuntime</Name>
+    </ProjectReference>
     <ProjectReference Include="SteamVR.csproj">
-      <Project>{3D4F672D-5077-81F6-6353-210AB24F8D1D}</Project>
+      <Project>{78A3539E-B6E7-6063-D30F-F2687D4031C3}</Project>
       <Name>SteamVR</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.XR.Management.Samples.Editor.csproj">
-      <Project>{1A13BEC3-A0A8-5568-282B-75800E20094C}</Project>
+      <Project>{6C6B4E2D-FD3C-80AF-1AB2-24863EEEEA82}</Project>
       <Name>Unity.XR.Management.Samples.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="SteamVR_Actions.csproj">
-      <Project>{C331445F-A496-4814-E2A7-264E38CDD360}</Project>
+      <Project>{12537F7D-1CA6-AEF9-9C3B-A72399DEBCB5}</Project>
       <Name>SteamVR_Actions</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.XR.Management.Samples.csproj">
-      <Project>{DEEE5A5C-742E-F223-72FD-F5F074753CF0}</Project>
-      <Name>Unity.XR.Management.Samples</Name>
-    </ProjectReference>
-    <ProjectReference Include="NavMeshComponentsEditor.csproj">
-      <Project>{C6CE1244-6302-FBEE-6A4E-6C7278749978}</Project>
-      <Name>NavMeshComponentsEditor</Name>
-    </ProjectReference>
-    <ProjectReference Include="WorldBuildingRuntime.csproj">
-      <Project>{4A66693F-E83B-D3E3-4146-99F5E8FF0ED6}</Project>
-      <Name>WorldBuildingRuntime</Name>
-    </ProjectReference>
-    <ProjectReference Include="NavMeshComponents.csproj">
-      <Project>{75A694B5-A937-CAB2-5DFB-A53C35AB178C}</Project>
-      <Name>NavMeshComponents</Name>
-    </ProjectReference>
     <ProjectReference Include="Skybox3DRuntime.csproj">
-      <Project>{A539416D-69F5-AEEB-D297-5EC46EDD77FE}</Project>
+      <Project>{62DE194C-CBEB-08C7-BF55-8E6517826B43}</Project>
       <Name>Skybox3DRuntime</Name>
     </ProjectReference>
     <ProjectReference Include="PackageManagerCheck.csproj">
-      <Project>{3AD77F79-A682-DC3D-11FF-9421F623BBF7}</Project>
+      <Project>{1B64A748-FD6F-221C-F7F4-628CBBB246F4}</Project>
       <Name>PackageManagerCheck</Name>
     </ProjectReference>
-    <ProjectReference Include="SimpleSFXRuntime.csproj">
-      <Project>{46F7F84A-3B11-44B5-0682-30EEE40092C0}</Project>
-      <Name>SimpleSFXRuntime</Name>
+    <ProjectReference Include="Unity.XR.Management.Samples.csproj">
+      <Project>{96FA9F32-D0E4-3C63-9972-463BC296F543}</Project>
+      <Name>Unity.XR.Management.Samples</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
