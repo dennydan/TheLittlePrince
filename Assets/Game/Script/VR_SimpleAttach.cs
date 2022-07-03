@@ -4,7 +4,7 @@ using UnityEngine;
 using Valve.VR;
 using Valve.VR.InteractionSystem;
 
-public class SimpleAttach : MonoBehaviour
+public class VR_SimpleAttach : MonoBehaviour
 {
     public bool showHints = false;
 

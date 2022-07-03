@@ -4,7 +4,7 @@ using UnityEngine;
 using Valve.VR;
 using Valve.VR.InteractionSystem;
 
-public class PlayerController : MonoBehaviour
+public class VR_PlayerController : MonoBehaviour
 {
     public SteamVR_Action_Vector2 input;
     public float speed = 1;
