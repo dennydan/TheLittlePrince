@@ -61,6 +61,7 @@
     <Compile Include="Assets\External\3DGamekit\Scripts\Game\Core\InteractOnButton.cs" />
     <Compile Include="Assets\External\3DGamekit\Scripts\Game\Core\InventoryItem.cs" />
     <Compile Include="Assets\External\3DGamekit\Scripts\Effects\CopyShadowMap.cs" />
+    <Compile Include="Assets\Game\Script\DevilTreeHandler.cs" />
     <Compile Include="Assets\External\3DGamekit\Packages\DefaultPlayables\TimeDilation\TimeDilationClip.cs" />
     <Compile Include="Assets\External\3DGamekit\Scripts\Game\Timeline\MaterialSwitcher\MaterialSwitcherMixerBehaviour.cs" />
     <Compile Include="Assets\External\3DGamekit\Scripts\Game\Localization\TranslatedText.cs" />
@@ -162,6 +163,7 @@
     <Compile Include="Assets\External\3DGamekit\Scripts\Game\Helpers\ParticleDeactivator.cs" />
     <Compile Include="Assets\External\3DGamekit\Packages\DefaultPlayables\ScreenFader\ScreenFaderBehaviour.cs" />
     <Compile Include="Assets\External\3DGamekit\Packages\DefaultPlayables\TransformTween\TransformTweenClip.cs" />
+    <Compile Include="Assets\Game\Script\PlayerDig.cs" />
     <Compile Include="Assets\External\3DGamekit\Scripts\Game\Core\SceneLinkedSMB.cs" />
     <Compile Include="Assets\External\3DGamekit\Scripts\Game\Enemies\Spitter\SpitterBehaviour.cs" />
     <Compile Include="Assets\External\3DGamekit\Packages\Interactive\Runtime\Platforms\Runtime\Platform.cs" />
@@ -252,6 +254,7 @@
     <Compile Include="Assets\External\3DGamekit\Scripts\Game\UI\SetCursorMode.cs" />
     <Compile Include="Assets\External\3DGamekit\Scripts\Game\Core\InteractionTrigger.cs" />
     <Compile Include="Assets\External\3DGamekit\Scripts\Game\Enemies\Chomper\ChomperSMBFall.cs" />
+    <Compile Include="Assets\Game\Script\ModuleFlip.cs" />
     <Compile Include="Assets\External\3DGamekit\Packages\Interactive\Runtime\Senders\SendOnBecameVisible.cs" />
     <Compile Include="Assets\External\3DGamekit\Scripts\Game\UI\StartUI.cs" />
     <Compile Include="Assets\External\3DGamekit\Scripts\Game\Enemies\Grenadier\GrenadierSMBIdle.cs" />
