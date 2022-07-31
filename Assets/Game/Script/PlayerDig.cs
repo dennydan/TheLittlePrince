@@ -21,7 +21,8 @@ public class PlayerDig : MonoBehaviour
         //    DigTree();
         // ---long press demo---
 
-        if (Input.GetButtonDown("XRI_Right_TriggerButton") || Input.GetButtonDown("XRI_Right_GripButton"))
+        //if (Input.GetButtonDown("XRI_Right_TriggerButton") || Input.GetButtonDown("XRI_Right_GripButton"))
+        if (Input.GetButtonDown("Fire1"))
         {
             DigTree();
         }
@@ -52,10 +53,11 @@ public class PlayerDig : MonoBehaviour
         //Debug.Log("Dig~");
         // point at tree?
         // do something... ***no raycast in PC, so use this instead***
-        DevilTreeHandler obj = GameObject.Find("DevilTree").GetComponent<DevilTreeHandler>();
-
-        // dig it
-        obj.OnDig();
+        GameObject obj = GameObject.Find("DevilTree");
+        if (obj != null)
+        {
+            obj.GetComponent<DevilTreeHandler>().OnDig();
+        }
     }
     // ---long press demo---
 }
