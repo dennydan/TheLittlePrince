@@ -14,7 +14,7 @@ public class CheckLongPress : MonoBehaviour
         if (Input.GetButton("Fire1"))
         {
             pressTime += Time.deltaTime;
-            if (pressTime >= 2.0f)
+            if (pressTime >= pressTriggerTime)
             {
                 longPress = true;
             }
