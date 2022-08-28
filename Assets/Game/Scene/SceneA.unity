@@ -1512,7 +1512,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fbc3c9691c7b88458debe5a4324e560, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  longPress: 0
   pressTriggerTime: 2
   pressTime: 0
 --- !u!1 &278564438
