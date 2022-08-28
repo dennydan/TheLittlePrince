@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class PlayerDig : MonoBehaviour
 {
+    public ChoosingFromRaycast choosed;
+
+    private void Start()
+    {
+        choosed = GetComponent<ChoosingFromRaycast>();
+    }
+
     void Update()
     {
         //if (Input.GetButtonDown("XRI_Right_TriggerButton") || Input.GetButtonDown("XRI_Right_GripButton"))
@@ -19,13 +26,16 @@ public class PlayerDig : MonoBehaviour
         //Debug.Log("Dig~");
         // point at tree?
         // do something... ***no raycast in PC, so use this instead***
-        GameObject obj = GameObject.Find("DevilTree");
+        //GameObject obj = GameObject.Find("DevilTree");
 
-        // find a tree?
-        if (obj != null)
+        // I found a tree?
+        if(choosed.choosedObject != null)
         {
-            // dig it!
-            obj.GetComponent<DevilTreeHandler>().OnDig();
+            if (choosed.choosedObject.CompareTag("Devil Trees"))
+            {
+                // dig it!
+                choosed.choosedObject.GetComponent<DevilTreeHandler>().OnDig();
+            }
         }
     }
 }
