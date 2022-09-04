@@ -6,6 +6,7 @@ namespace Gamekit3D.GameCommands
     public class Collector : MonoBehaviour
     {
         public bool attachCollectables = false;
+        public bool debugLog;
 
         Dictionary<string, int> collections = new Dictionary<string, int>();
         public virtual void OnCollect(Collectable collectable)
@@ -17,6 +18,9 @@ namespace Gamekit3D.GameCommands
                 collections[collectable.name] = count + 1;
             else
                 collections[collectable.name] = 1;
+
+            if(debugLog)
+                Debug.Log("You Get: " + collectable.name + ", nums: " + collections[collectable.name]);
         }
 
         public bool HasCollectable(string name)
@@ -30,6 +34,14 @@ namespace Gamekit3D.GameCommands
             if (collections.TryGetValue(name, out count))
                 return count >= requiredCount;
             return false;
+        }
+
+        public int GetCollectableQuantity(string name)
+        {
+            int count;
+            if (collections.TryGetValue(name, out count))
+                return count;
+            return -1;
         }
     }
 
