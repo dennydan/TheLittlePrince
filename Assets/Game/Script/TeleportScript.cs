@@ -2,22 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerStandOnPlatform : MonoBehaviour
+public class TeleportScript : MonoBehaviour
 {
     bool TPable = false;
-    //Vector3 translation;
+    SphereCollider colliderPosition;
+
+    private void Start()
+    {
+        colliderPosition = GetComponent<SphereCollider>();
+    }
 
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.CompareTag("Player"))
         {
-            Debug.Log("TP enable");
-            Debug.Log("IN");
-
-            // moving with platform +++
-            other.gameObject.transform.SetParent(transform.parent);
-            // moving with platform ---
-
             TPable = true;
         }
     }
@@ -25,13 +23,6 @@ public class PlayerStandOnPlatform : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Debug.Log("TP disable");
-            Debug.Log("OUT");
-
-            // moving with platform +++
-            other.gameObject.transform.SetParent(null);
-            // moving with platform ---
-
             TPable = false;
         }
     }
@@ -43,7 +34,8 @@ public class PlayerStandOnPlatform : MonoBehaviour
             if(TPable)
             {
                 GameObject obj = GameObject.Find("XR Origin");  //For simulator
-                obj.transform.position = transform.position + new Vector3(0, 0.8f, 0);
+                //GameObject obj = GameObject.Find("Player");  //For SteamVR
+                obj.transform.position = transform.position + colliderPosition.center + new Vector3(0, 0.8f, 0);
             }
         }
     }
