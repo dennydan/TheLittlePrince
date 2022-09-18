@@ -346,6 +346,8 @@ GameObject:
   - component: {fileID: 2594916500923849751}
   - component: {fileID: 2720789206990552223}
   - component: {fileID: 2659215750420073473}
+  - component: {fileID: 7221140921611173374}
+  - component: {fileID: 150578422}
   m_Layer: 16
   m_Name: GateWayHugeTeleporter
   m_TagString: Untagged
@@ -360,7 +362,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2658441217633319345}
-  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -177.68773, y: 25.4, z: -42.9579}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
@@ -371,7 +373,7 @@ Transform:
   - {fileID: 2663585569307889603}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!205 &2756169188849701625
 LODGroup:
   m_ObjectHideFlags: 0
@@ -537,3 +539,29 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300004, guid: d6bae189a0fe4b948ab13c0103d593c0, type: 3}
+--- !u!114 &7221140921611173374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2658441217633319345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a024b5b63e952a4a949353e856c43a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newSceneName: SceneB_competition
+--- !u!65 &150578422
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2658441217633319345}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 14.09, y: 28.6, z: 1}
+  m_Center: {x: 0, y: 9.5, z: 0}
