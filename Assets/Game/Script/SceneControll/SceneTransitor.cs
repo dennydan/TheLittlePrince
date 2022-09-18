@@ -24,7 +24,7 @@ public class SceneTransitor : MonoBehaviour
     {
         print("SceneController_OnTriggerEnter");
         //SceneManager.LoadScene(0);
-        if (other.GetComponent<CharacterController>())
+        if (other.GetComponent<CharacterController>().name == "Ellen")
         {
             SceneManager.LoadScene("SceneB_competition");
         }
