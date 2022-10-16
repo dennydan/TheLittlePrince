@@ -22,6 +22,8 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        GameObject.Find("ModuleUI").gameObject.SetActive(false); // ModuleUI default off
     }
 
     public void OnStartGame(string SceneName)
@@ -29,18 +31,18 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(SceneName);
     }
 
-    public void OnSelectLevel()
-    {
-        try
-        {
-            selectedLevel = dropdown.value;
-        }
-        catch (System.Exception)
-        {
-            selectedLevel = 0;
-            Debug.Log("GM: no dropdown in this scene");
-            throw;
-        }
+    //public void OnSelectLevel()
+    //{
+    //    try
+    //    {
+    //        selectedLevel = dropdown.value;
+    //    }
+    //    catch (System.Exception)
+    //    {
+    //        selectedLevel = 0;
+    //        Debug.Log("GM: no dropdown in this scene");
+    //        throw;
+    //    }
             
-    }
+    //}
 }
