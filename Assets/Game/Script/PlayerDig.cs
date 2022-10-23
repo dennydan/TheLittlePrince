@@ -34,7 +34,7 @@ public class PlayerDig : MonoBehaviour
             if (choosed.choosedObject.CompareTag("Devil Trees"))
             {
                 // dig it!
-                choosed.choosedObject.GetComponent<DevilTreeHandler>().OnDig();
+                choosed.choosedObject.GetComponent<DevilTreeHandler>().OnDig(this.name);
             }
         }
     }

@@ -85,12 +85,13 @@ public class DevilTreeHandler : MonoBehaviour
             damagable = true;
     }
 
-    public void OnDig()
+    public void OnDig(string digger)
     {
         if(damagable)
         {
             if (--HP == 0 && (this.gameObject != null))
             {
+                GameManager.OnTreeDigged(digger);
                 Destroy(this.gameObject);
             }
         }

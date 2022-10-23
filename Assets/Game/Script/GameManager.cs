@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
+using Gamekit3D.GameCommands;
 
 public class GameManager : MonoBehaviour
 {
@@ -14,13 +15,21 @@ public class GameManager : MonoBehaviour
 
     GameObject moduleUI;
 
+    public static int PC_tree, VR_tree;    // score board
+    public static int end_point = 3;    // win point
+
+    public static int stars;    // collected stars
+
+    public static int passedQuest;  // you're smart ass
+    public static int pass_num = 3;
+
     private void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
             DontDestroyOnLoad(this);
-        }else if(Instance != this)
+        } else if (Instance != this)
         {
             Destroy(gameObject);
         }
@@ -49,7 +58,7 @@ public class GameManager : MonoBehaviour
             Transform canvas = GameObject.Find("Canvas").transform;
             for (int i = 0; i < canvas.childCount; i++)
             {
-                if(canvas.GetChild(i).name == "ModuleUI")
+                if (canvas.GetChild(i).name == "ModuleUI")
                 {
                     moduleUI = canvas.GetChild(i).gameObject;
                 }
@@ -91,5 +100,39 @@ public class GameManager : MonoBehaviour
             }
         }
         return null;
+    }
+
+    public static void OnTreeDigged(string digger)
+    {
+        if(digger == "Ellen")
+        {
+            PC_tree++;
+        }
+        else
+        {
+            VR_tree++;
+        }
+        Debug.Log("Score: PC=" + PC_tree + ", VR=" + VR_tree);
+
+        if(PC_tree >= end_point || VR_tree >= end_point)    // you win! end game
+        {
+            SceneTransitor.LoadNewScene("SceneB_cooperation");
+        }
+    }
+
+    public static void OnCollectStar()
+    {
+        if (++stars >= 6)
+        {
+            SceneTransitor.LoadNewScene("SceneB_exploration");
+        }
+    }
+
+    public void OnPassExQuestion()
+    {
+        if(++passedQuest >= pass_num)     // all pass! congratulation!
+        {
+            SceneTransitor.LoadNewScene("SceneB_competition");
+        }
     }
 }

@@ -27,8 +27,12 @@ public class SceneTransitor : MonoBehaviour
         
     }
 
-    public void LoadNewScene(string newScene)
+    public static void LoadNewScene(string newScene)
     {
+        GameManager.PC_tree = 0;
+        GameManager.VR_tree = 0;
+        GameManager.stars = 0;
+        GameManager.passedQuest = 0;
         SceneManager.LoadScene(newScene);
     }
 }

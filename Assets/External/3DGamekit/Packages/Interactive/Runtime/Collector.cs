@@ -21,6 +21,7 @@ namespace Gamekit3D.GameCommands
 
             if(debugLog)
                 Debug.Log("You Get: " + collectable.name + ", nums: " + collections[collectable.name]);
+            GameManager.OnCollectStar();
         }
 
         public bool HasCollectable(string name)
