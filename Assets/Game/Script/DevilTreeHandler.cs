@@ -27,7 +27,6 @@ public class DevilTreeHandler : MonoBehaviour
         if (timeValue > 0 && growStage < 2)
         {
             timeValue -= Time.deltaTime;
-            //grow up
             GrowUp();
         }
         else
@@ -58,9 +57,9 @@ public class DevilTreeHandler : MonoBehaviour
         //meshFilter2.mesh = soilMesh[stage - 1];
 
         if(stage == 1)
-            child = this.transform.Find("little sapling");
+            child = this.transform.Find("little sapling1");
         else
-            child = this.transform.Find("glowing tree(Clone)");
+            child = this.transform.Find("glowing tree1(Clone)");
 
         // Get child transform
         objectScale = child.transform.localScale;
@@ -68,12 +67,12 @@ public class DevilTreeHandler : MonoBehaviour
 
         if(stage == 1)  // fix generated position
         {
-            objectPos = new Vector3(objectPos.x + 0.1f, objectPos.y - 0.1f, objectPos.z - 0.2f);
+            objectPos = new Vector3(objectPos.x - 0.712000012f, objectPos.y - 0.63499999f, objectPos.z - 0.194999993f);
         }
         else
         {
             objectPos = new Vector3(objectPos.x - 0.15f, objectPos.y, objectPos.z + 0.1f);
-            objectScale = new Vector3(objectScale.x / 1.5f, objectScale.y / 1.5f, objectScale.z / 1.5f);
+            //objectScale = new Vector3(objectScale.x / 1.5f, objectScale.y / 1.5f, objectScale.z / 1.5f);
         }
 
         Destroy(child.gameObject);

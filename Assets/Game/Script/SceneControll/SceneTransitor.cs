@@ -26,4 +26,9 @@ public class SceneTransitor : MonoBehaviour
         }
         
     }
+
+    public void LoadNewScene(string newScene)
+    {
+        SceneManager.LoadScene(newScene);
+    }
 }

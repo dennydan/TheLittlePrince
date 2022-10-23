@@ -44,7 +44,7 @@ public class ChoosingFromRaycast : MonoBehaviour
                 if (previousName == hit.collider.name) // same tree
                 {
                     var tmp = hit.collider.transform.GetChild(0);
-                    if (tmp.name != "final tree(Clone)")
+                    if (tmp.name != "final tree1(Clone)")
                     {
                         if (debugRay)
                             Debug.Log("Not Even Close!!");
@@ -75,7 +75,7 @@ public class ChoosingFromRaycast : MonoBehaviour
                     choosedObject = hit.collider.transform;
                     previousName = choosedObject.name;
                     glowObject = choosedObject.GetChild(0);
-                    if (glowObject.name == "final tree(Clone)") // is final stage?
+                    if (glowObject.name == "final tree1(Clone)") // is final stage?
                     {
                         MeshRenderer glowChild = glowObject.GetComponentInChildren<MeshRenderer>();
                         Material[] materials = glowChild.sharedMaterials;
@@ -84,7 +84,7 @@ public class ChoosingFromRaycast : MonoBehaviour
                         NormalMaterials = glowChild.sharedMaterials;
 
                         // change material to outline
-                        materials[1] = outlinedMaterial;
+                        materials[0] = outlinedMaterial;
                         glowChild.sharedMaterials = materials;
                     }
                 }

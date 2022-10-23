@@ -34,7 +34,15 @@ public class TeleportScript : MonoBehaviour
             if(TPable)
             {
                 GameObject obj = GameObject.Find("XR Origin");  //For simulator
-                //GameObject obj = GameObject.Find("Player");  //For SteamVR
+                try
+                {
+                    obj = GameObject.Find("Player");  //For SteamVR
+                }
+                catch (System.Exception)
+                {
+                    Debug.Log("No VR player");
+                    throw;
+                }
                 obj.transform.position = transform.position + colliderPosition.center + new Vector3(0, 2.8f, 0);
             }
         }
