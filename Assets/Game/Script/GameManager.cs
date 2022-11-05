@@ -8,6 +8,7 @@ using Gamekit3D.GameCommands;
 
 public class GameManager : MonoBehaviour
 {
+    // 改成單例模式
     public static GameManager Instance;
 
     //public TMP_Dropdown dropdown;
@@ -22,6 +23,8 @@ public class GameManager : MonoBehaviour
 
     public static int passedQuest;  // you're smart ass
     public static int pass_num = 3;
+
+    public static bool competitionFinish = false;
 
     private void Awake()
     {
@@ -116,7 +119,7 @@ public class GameManager : MonoBehaviour
 
         if(PC_tree >= end_point || VR_tree >= end_point)    // you win! end game
         {
-            SceneTransitor.LoadNewScene("SceneB_cooperation");
+            competitionFinish = true;
         }
     }
 

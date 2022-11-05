@@ -53,7 +53,7 @@ MonoBehaviour:
   sapStage:
   - {fileID: 4807284222803322845, guid: a6abc2d47d059ff4b8e14f9add7a119e, type: 3}
   - {fileID: 6625328956452654607, guid: 8ee3bd2e2cc41c24fa75e6f2f84af6b2, type: 3}
-  damagable: 0
+  damagable: 1
 --- !u!65 &2046746033
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -65,8 +65,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.0439926, y: 1.501994, z: 1.1818521}
-  m_Center: {x: 0.52313703, y: -0.7285829, z: 6.243444}
+  m_Size: {x: 1, y: 3, z: 1}
+  m_Center: {x: 0, y: 1.22, z: 0}
 --- !u!1001 &5107484968329078172
 PrefabInstance:
   m_ObjectHideFlags: 0
