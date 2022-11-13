@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class TeleportScript : MonoBehaviour
 {
-    bool TPable = false;
     SphereCollider colliderPosition;
 
     private void Start()
@@ -16,35 +15,17 @@ public class TeleportScript : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Player"))
         {
-            TPable = true;
-        }
-    }
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            TPable = false;
-        }
-    }
-
-    private void Update()
-    {
-        if(Input.GetButton("Fire2"))
-        {
-            if(TPable)
+            GameObject obj = GameObject.Find("XR Origin");  //For simulator
+            try
             {
-                GameObject obj = GameObject.Find("XR Origin");  //For simulator
-                try
-                {
-                    obj = GameObject.Find("Player");  //For SteamVR
-                }
-                catch (System.Exception)
-                {
-                    Debug.Log("No VR player");
-                    throw;
-                }
-                obj.transform.position = transform.position + colliderPosition.center + new Vector3(0, 2.8f, 0);
+                obj = GameObject.Find("Player");  //For SteamVR
             }
+            catch (System.Exception)
+            {
+                Debug.Log("No VR player");
+                throw;
+            }
+            obj.transform.position = transform.GetChild(0).transform.position + colliderPosition.center + new Vector3(0, 2.8f, 0);
         }
     }
 }

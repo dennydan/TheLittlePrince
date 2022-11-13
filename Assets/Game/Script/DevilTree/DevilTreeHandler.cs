@@ -10,8 +10,6 @@ public class DevilTreeHandler : MonoBehaviour
     public float timerReset = 5;
     public int growStage = 0;   // sampling, cone, tree
     public Object[] sapStage;
-    //public Mesh[] treeMesh;
-    //public Mesh[] soilMesh;
     public bool damagable = false;
 
     // Start is called before the first frame update
@@ -47,40 +45,35 @@ public class DevilTreeHandler : MonoBehaviour
     {
         Transform child;
         GameObject go;
-        Vector3 objectScale, objectPos;
-        //GameObject gameObject1 = GameObject.Find("Sapling");
-        //MeshFilter meshFilter1 = gameObject1.GetComponent<MeshFilter>();
-        //meshFilter1.mesh = treeMesh[stage-1];
+        Vector3 objectPos, objectScale;
+        Quaternion objectRotate;
 
-        //GameObject gameObject2 = GameObject.Find("Soil");
-        //MeshFilter meshFilter2 = gameObject2.GetComponent<MeshFilter>();
-        //meshFilter2.mesh = soilMesh[stage - 1];
-
-        if(stage == 1)
-            child = this.transform.Find("little sapling1");
+        if (stage == 1)
+            child = this.transform.Find("little sapling");
         else
-            child = this.transform.Find("glowing tree1(Clone)");
+            child = this.transform.Find("glowing tree(Clone)");
 
         // Get child transform
-        objectScale = child.transform.localScale;
-        objectPos = child.transform.position;
+        //objectPos = child.transform.localPosition;
+        //objectRotate = child.transform.rotation;
+        //objectScale = child.transform.localScale;
 
-        if(stage == 1)  // fix generated position
+        if (stage == 1)  // fix generated position, position of prefab
         {
-            objectPos = new Vector3(objectPos.x - 0.712000012f, objectPos.y - 0.63499999f, objectPos.z - 0.194999993f);
+            objectPos = new Vector3(0, -0.175f ,0);
         }
         else
         {
-            objectPos = new Vector3(objectPos.x - 0.15f, objectPos.y, objectPos.z + 0.1f);
-            //objectScale = new Vector3(objectScale.x / 1.5f, objectScale.y / 1.5f, objectScale.z / 1.5f);
+            objectPos = new Vector3(2.12700009f, -0.1320000011f, 0);
         }
 
         Destroy(child.gameObject);
 
         go = Instantiate(sapStage[stage-1], this.transform.position, Quaternion.identity) as GameObject;
         go.transform.parent = this.transform;
-        go.transform.localScale = objectScale;
-        go.transform.position = objectPos;
+        go.transform.localPosition = objectPos;
+        //go.transform.rotation = objectRotate;
+        //go.transform.localScale = objectScale;
         if (stage == 2)
             damagable = true;
     }

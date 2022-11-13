@@ -119,6 +119,7 @@ public class GameManager : MonoBehaviour
 
         if(PC_tree >= end_point || VR_tree >= end_point)    // you win! end game
         {
+            PC_tree = VR_tree = 0;
             competitionFinish = true;
         }
     }
@@ -127,6 +128,7 @@ public class GameManager : MonoBehaviour
     {
         if (++stars >= 6)
         {
+            stars = 0;
             SceneTransitor.LoadNewScene("SceneB_exploration");
         }
     }
@@ -135,6 +137,7 @@ public class GameManager : MonoBehaviour
     {
         if(++passedQuest >= pass_num)     // all pass! congratulation!
         {
+            passedQuest = 0;
             SceneTransitor.LoadNewScene("SceneB_competition");
         }
     }
