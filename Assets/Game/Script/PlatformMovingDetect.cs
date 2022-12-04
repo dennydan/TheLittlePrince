@@ -8,6 +8,7 @@ public class PlatformMovingDetect : MonoBehaviour
     public Vector3 originPosition, deltaPosition, newposition;
     //public Quaternion origiRotation, deltaRotation, newRotation;
     public Platform platform;
+    public bool debugLog;
 
     protected CharacterController m_CharacterController;
 
@@ -34,7 +35,8 @@ public class PlatformMovingDetect : MonoBehaviour
                 newposition = platform.transform.position;
                 deltaPosition = newposition - originPosition;
                 originPosition = newposition;
-                Debug.Log("move: " + deltaPosition);
+                if(debugLog)
+                    Debug.Log("move: " + deltaPosition);
                 m_CharacterController.Move(deltaPosition);
             }
         }

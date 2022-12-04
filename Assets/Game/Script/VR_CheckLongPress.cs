@@ -14,7 +14,7 @@ public class VR_CheckLongPress : MonoBehaviour
 
     public bool CheckButton()
     {
-        //if (Input.GetButton("XRI_Right_Trigger") || Input.GetButton("XRI_Right_Grip"))
+        //if (Input.GetButton("XRI_Right_TriggerButton") || Input.GetButton("XRI_Right_GripButton"))
         if (inputAction.GetState(SteamVR_Input_Sources.RightHand))
         {
             pressTime += Time.deltaTime;
