@@ -107,7 +107,7 @@ public class GameManager : MonoBehaviour
 
     public static void OnTreeDigged(string digger)
     {
-        if(digger == "Ellen")
+        if(digger == "Fox")
         {
             PC_tree++;
         }
