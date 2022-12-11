@@ -105,7 +105,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4616991824525644623}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: little_Prince_0729:whole_body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -392,7 +392,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9077823867258157884}
   - component: {fileID: 2490735837102642490}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: little_Prince_0729:pTorus1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -938,7 +938,7 @@ GameObject:
   - component: {fileID: 1232307151797497435}
   - component: {fileID: 1043118032460103937}
   - component: {fileID: 2417981405321248783}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: little_Prince_0729:glass_cover
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1333,7 +1333,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1901572387724642654}
   - component: {fileID: 5868950833034987105}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: little_Prince_0729:pPlane1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1428,7 +1428,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6750447697237184147}
   - component: {fileID: 2179680395261141625}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: little_Prince_0729:belt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2063,7 +2063,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3830379197757631278}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: group2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2313,7 +2313,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4888969190656384436}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -1.46, z: 1.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2643,7 +2643,7 @@ GameObject:
   - component: {fileID: 5699430958449781228}
   - component: {fileID: 5699430958449780755}
   - component: {fileID: 5699430958449781229}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube
   m_TagString: Platform
   m_Icon: {fileID: 0}
@@ -3097,7 +3097,7 @@ GameObject:
   - component: {fileID: 5699430960192946242}
   - component: {fileID: 5699430960192946241}
   - component: {fileID: 5699430960192946240}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube
   m_TagString: Platform
   m_Icon: {fileID: 0}
@@ -3495,7 +3495,7 @@ GameObject:
   m_Component:
   - component: {fileID: 479512061546585716}
   - component: {fileID: 8686065823842196654}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: little_Prince_0729:pCylinder27
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4014,7 +4014,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1372076537647543300}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: little_Prince_0729:hat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4142,7 +4142,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2608556189718808232}
   - component: {fileID: 3014218476975273729}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: little_Prince_0729:pSphere1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4268,7 +4268,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2244958777336928947}
   - component: {fileID: 5602650691004809163}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: little_Prince_0729:polySurface3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4462,7 +4462,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8486218210022894556}
   - component: {fileID: 7343411822015799325}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: little_Prince_0729:pTorus2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4756,7 +4756,7 @@ GameObject:
   - component: {fileID: 137717546919546702}
   - component: {fileID: 1456567374052397531}
   - component: {fileID: 1456567374052397530}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: little_Prince_0729:group3_little_Prince_0729:pCylinder30
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4996,7 +4996,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1909550808043428671}
   - component: {fileID: 8233578989861972935}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: little_Prince_0729:pCylinder26
   m_TagString: Untagged
   m_Icon: {fileID: 0}

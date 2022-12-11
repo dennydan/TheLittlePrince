@@ -1,58 +1,87 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using Valve.VR;
 using Valve.VR.Extras;
 
-public class VR_PlayerDig : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
+public class VR_PlayerDig : MonoBehaviour
 {
-
     public SteamVR_Action_Boolean inputAction;
-    public bool selected;
+    private SteamVR_LaserPointer rightHandLaser;
+    protected Animator m_Animator;
+    readonly int m_HashChop = Animator.StringToHash("Chop");
+    protected DevilTreeHandler devilTree;
+    public Transform glowObject;
+    public Material outlinedMaterial;
+    public Material NormalMaterial;
 
-    void Update()
+    private void Awake()
     {
-        //if (Input.GetButtonDown("XRI_Right_TriggerButton") || Input.GetButtonDown("XRI_Right_GripButton"))
-        //if (inputAction.GetState(SteamVR_Input_Sources.RightHand))
-        //{
-        //    DigTree();
-        //}
+        m_Animator = GetComponent<Animator>();
     }
 
+    private void Start()
+    {
+        rightHandLaser = GameObject.Find("RightHand").GetComponent<SteamVR_LaserPointer>();
+        rightHandLaser.PointerIn += PointerIn;
+        rightHandLaser.PointerOut += PointerOut;
+        rightHandLaser.PointerClick += PointerClick;
+    }
 
+    private void PointerClick(object sender, PointerEventArgs e)  // dig tree
+    {
+        //Debug.Log("Click");
+        if (e.target.name == "DevilTree(Clone)")
+        {
+            if (e.target.GetChild(0).name == "final tree(Clone)")
+            {
+                // dig it!
+                m_Animator.SetTrigger(m_HashChop);
+            }
+        }
+    }
+
+    private void PointerIn(object sender, PointerEventArgs e)  // glow tree
+    {
+        //Debug.Log("Enter");
+        if (e.target.name == "DevilTree(Clone)")
+        {
+            devilTree = e.target.GetComponent<DevilTreeHandler>();
+
+            glowObject = e.target.GetChild(0);
+            if (glowObject.name == "final tree(Clone)") // is final stage?
+            {
+                MeshRenderer glowChild = glowObject.GetComponentInChildren<MeshRenderer>();
+                Material[] materials = glowChild.sharedMaterials;
+
+                // change material to outline
+                materials[0] = outlinedMaterial;
+                glowChild.sharedMaterials = materials;
+            }
+        }
+    }
+
+    private void PointerOut(object sender, PointerEventArgs e)   // de-glow tree
+    {
+        //Debug.Log("Exit");
+        if (e.target.name == "DevilTree(Clone)")
+        {
+            glowObject = e.target.GetChild(0);
+            if (glowObject.name == "final tree(Clone)") // is final stage?
+            {
+                MeshRenderer glowChild = glowObject.GetComponentInChildren<MeshRenderer>();
+                Material[] materials = glowChild.sharedMaterials;
+
+                // change material to outline
+                materials[0] = NormalMaterial;
+                glowChild.sharedMaterials = materials;
+            }
+
+            devilTree = null;
+        }
+    }
     void DigTree()
     {
-        //Debug.Log("Dig~");
-        // point at tree?
-        // do something... ***no raycast in PC, so use this instead***
-        //GameObject obj = GameObject.Find("DevilTree");
-
-        // I found a tree?
-        //if (choosed.choosedObject != null)
-        //{
-        //    if (choosed.choosedObject.CompareTag("Devil Trees"))
-        //    {
-        //        // dig it!
-        //        choosed.choosedObject.GetComponent<DevilTreeHandler>().OnDig();
-        //    }
-        //}
-    }
-
-
-    public void OnPointerClick(PointerEventData eventData)  // dig tree
-    {
-        Debug.Log("Click");
-        DigTree();
-    }
-
-    public void OnPointerEnter(PointerEventData eventData)  // glow tree
-    {
-        Debug.Log("Enter");
-    }
-
-    public void OnPointerExit(PointerEventData eventData)   // de-glow tree
-    {
-        Debug.Log("Exit");
+        devilTree.OnDig(this.name);
     }
 }

@@ -32,7 +32,7 @@ public class DevilTreeManager : MonoBehaviour
 
     private void Awake()
     {
-        Debug.Log("DevilTreeManager");
+        //Debug.Log("DevilTreeManager");
         GameObject[] treeArray = GameObject.FindGameObjectsWithTag(TREE_TAG);
         
         for (int i = 0; i < treeArray.Length; ++i)
@@ -62,7 +62,7 @@ public class DevilTreeManager : MonoBehaviour
                 {
                     if (m_state.IsEntering())
                     {
-                        Debug.Log("TREE_STATE.Init");
+                        //Debug.Log("TREE_STATE.Init");
                         m_timer = m_spawnTime;
                         m_state.NextState(m_state.Current() + 1);
                     }
@@ -72,7 +72,7 @@ public class DevilTreeManager : MonoBehaviour
                 {
                     if(m_state.IsEntering())
                     {
-                        Debug.Log("TREE_STATE.Spawn");
+                        //Debug.Log("TREE_STATE.Spawn");
                         spawnTree(Random.Range(0,TREE_AMOUNT-1));
                     }
                     else if(GameManager.competitionFinish)
@@ -96,7 +96,7 @@ public class DevilTreeManager : MonoBehaviour
                     if(m_state.IsEntering())
                     {
                         SceneTransitor.LoadNewScene(m_transitSceneName);
-                        Debug.Log("TREE_STATE.End");
+                        //Debug.Log("TREE_STATE.End");
                     }
                     break;
                 }
@@ -110,7 +110,7 @@ public class DevilTreeManager : MonoBehaviour
     {
         if (num < 0 || num >= TREE_AMOUNT )
         {
-            Debug.Log("CreateTree_OutOfRange...");
+            //Debug.Log("CreateTree_OutOfRange...");
             return;
         }
 

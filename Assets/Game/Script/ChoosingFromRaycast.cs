@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class ChoosingFromRaycast : MonoBehaviour
 {
-    public float range = 5;
+    public float range = 1.5f;
     public Transform choosedObject;
     public bool debugRay = true;
     private Transform glowObject;
     public Material outlinedMaterial;
-    private MeshRenderer previousChild;
     public Material[] NormalMaterials;
+    public MeshRenderer previousChild;
     public string previousName = null;
 
     // Update is called once per frame
@@ -22,6 +22,7 @@ public class ChoosingFromRaycast : MonoBehaviour
         if(debugRay)
             Debug.DrawRay(pos, transform.TransformDirection(direction * range));
 
+        //TODO: fix these code, outlined if choosed, or invisible. Loud and clear.
         if(Physics.Raycast(theRay, out RaycastHit hit, range))
         {
             if (hit.collider.tag != "Devil Trees")  // not tree
@@ -37,7 +38,7 @@ public class ChoosingFromRaycast : MonoBehaviour
                     previousChild.sharedMaterials = NormalMaterials;
                 // clear temp
                 previousChild = null;
-                NormalMaterials = null;
+                //NormalMaterials = null;
             }
             else // is tree
             {
@@ -57,6 +58,15 @@ public class ChoosingFromRaycast : MonoBehaviour
                     {
                         if (debugRay)
                             Debug.Log("Do Nothing!");
+                        MeshRenderer glowChild = glowObject.GetComponentInChildren<MeshRenderer>();
+                        Material[] materials = glowChild.sharedMaterials;
+                        // save current choosing, recover when not choosed
+                        previousChild = glowObject.GetComponentInChildren<MeshRenderer>();
+                        //NormalMaterials = glowChild.sharedMaterials;
+
+                        // change material to outline
+                        materials[0] = outlinedMaterial;
+                        glowChild.sharedMaterials = materials;
                     }
                 }
                 else // not the same tree!!
@@ -66,7 +76,7 @@ public class ChoosingFromRaycast : MonoBehaviour
                         previousChild.sharedMaterials = NormalMaterials;
                     // clear temp
                     previousChild = null;
-                    NormalMaterials = null;
+                    //NormalMaterials = null;
                     glowObject = null;
 
 
@@ -81,7 +91,7 @@ public class ChoosingFromRaycast : MonoBehaviour
                         Material[] materials = glowChild.sharedMaterials;
                         // save current choosing, recover when not choosed
                         previousChild = glowObject.GetComponentInChildren<MeshRenderer>();
-                        NormalMaterials = glowChild.sharedMaterials;
+                        //NormalMaterials = glowChild.sharedMaterials;
 
                         // change material to outline
                         materials[0] = outlinedMaterial;
@@ -97,6 +107,8 @@ public class ChoosingFromRaycast : MonoBehaviour
             // put origin materials back
             if (previousChild != null)
                 previousChild.sharedMaterials = NormalMaterials;
+            previousChild = null;
+
             // clear tmp
             choosedObject = null;
             previousName = null;

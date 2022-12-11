@@ -25,6 +25,9 @@ public class VR_PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Set the animator parameter to control what animation is being played.
+        m_ForwardSpeed = input.axis.magnitude * 8;
+        m_Animator.SetFloat("ForwardSpeed", m_ForwardSpeed);
         if (input.axis.magnitude > 0.1f)
         {
             Vector3 direction = Player.instance.hmdTransform.TransformDirection(new Vector3(input.axis.x, 0, input.axis.y));
@@ -33,11 +36,8 @@ public class VR_PlayerController : MonoBehaviour
             Vector3 movement;
             movement = speed * Time.deltaTime * Vector3.ProjectOnPlane(direction, Vector3.up);
 
-            m_ForwardSpeed = input.axis.normalized.magnitude * 8;
-            // Set the animator parameter to control what animation is being played.
-            m_Animator.SetFloat("ForwardSpeed", m_ForwardSpeed);
 
-            Debug.Log("movement: " + movement);
+            //Debug.Log("movement: " + movement);
             characterController.Move(movement - new Vector3(0, 9.81f, 0) * Time.deltaTime);
         }
     }

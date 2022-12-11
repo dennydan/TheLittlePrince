@@ -29,8 +29,11 @@ public class PlayerDig : MonoBehaviour
                 if (choosed.choosedObject.CompareTag("Devil Trees"))
                 {
                     devilTree = choosed.choosedObject.GetComponent<DevilTreeHandler>();
-                    // dig it!
-                    m_Animator.SetTrigger(m_HashChop);
+                    if (devilTree.transform.GetChild(0).name == "final tree(Clone)")
+                    {
+                        // dig it!
+                        m_Animator.SetTrigger(m_HashChop);
+                    }
                 }
             }
         }

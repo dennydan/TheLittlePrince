@@ -23,6 +23,8 @@ namespace Valve.VR.Extras
         public event PointerEventHandler PointerIn;
         public event PointerEventHandler PointerOut;
         public event PointerEventHandler PointerClick;
+        public float m_maxDist = 1.5f;
+        public float m_dist = 1.5f;
 
         Transform previousContact = null;
 
@@ -97,11 +99,11 @@ namespace Valve.VR.Extras
                 this.transform.GetChild(0).gameObject.SetActive(true);
             }
 
-            float dist = 100f;
+            //float dist = 100f;
 
             Ray raycast = new Ray(transform.position, transform.forward);
             RaycastHit hit;
-            bool bHit = Physics.Raycast(raycast, out hit);
+            bool bHit = Physics.Raycast(raycast, out hit, m_maxDist);
 
             if (previousContact && previousContact != hit.transform)
             {
@@ -127,9 +129,9 @@ namespace Valve.VR.Extras
             {
                 previousContact = null;
             }
-            if (bHit && hit.distance < 100f)
+            if (bHit && hit.distance < m_maxDist)
             {
-                dist = hit.distance;
+                m_dist = hit.distance;
             }
 
             if (bHit && interactWithUI.GetStateUp(pose.inputSource))
@@ -144,15 +146,15 @@ namespace Valve.VR.Extras
 
             if (interactWithUI != null && interactWithUI.GetState(pose.inputSource))
             {
-                pointer.transform.localScale = new Vector3(thickness * 5f, thickness * 5f, dist);
+                pointer.transform.localScale = new Vector3(thickness * 5f, thickness * 5f, m_dist);
                 pointer.GetComponent<MeshRenderer>().material.color = clickColor;
             }
             else
             {
-                pointer.transform.localScale = new Vector3(thickness, thickness, dist);
+                pointer.transform.localScale = new Vector3(thickness, thickness, m_dist);
                 pointer.GetComponent<MeshRenderer>().material.color = color;
             }
-            pointer.transform.localPosition = new Vector3(0f, 0f, dist / 2f);
+            pointer.transform.localPosition = new Vector3(0f, 0f, m_dist / 2f);
         }
     }
 

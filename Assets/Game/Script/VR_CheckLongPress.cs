@@ -5,7 +5,7 @@ using Valve.VR;
 
 public class VR_CheckLongPress : MonoBehaviour
 {
-    public SteamVR_Action_Boolean inputAction;
+    public SteamVR_Action_Boolean gripAction;
 
     protected bool longPress = false;
     [SerializeField]
@@ -15,11 +15,13 @@ public class VR_CheckLongPress : MonoBehaviour
     public bool CheckButton()
     {
         //if (Input.GetButton("XRI_Right_TriggerButton") || Input.GetButton("XRI_Right_GripButton"))
-        if (inputAction.GetState(SteamVR_Input_Sources.RightHand))
+        if (gripAction.GetState(SteamVR_Input_Sources.Any))
         {
+            Debug.Log("checking...");
             pressTime += Time.deltaTime;
             if (pressTime >= pressTriggerTime)
             {
+                Debug.Log("checked!");
                 longPress = true;
             }
         }
