@@ -13,7 +13,7 @@ public class TeleportScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.CompareTag("Player"))
+        if(other.gameObject.CompareTag("Player"))   // if PC player get in TP point
         {
             GameObject obj = GameObject.Find("XR Origin");  //For simulator
             try
@@ -25,7 +25,8 @@ public class TeleportScript : MonoBehaviour
                 Debug.Log("No VR player");
                 throw;
             }
-            obj.transform.position = transform.GetChild(0).transform.position + colliderPosition.center + new Vector3(0, 2.8f, 0);
+            Debug.Log("TP VR");
+            obj.transform.position = transform.GetChild(0).transform.position;
         }
     }
 }

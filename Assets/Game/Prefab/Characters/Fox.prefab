@@ -1413,7 +1413,7 @@ GameObject:
   - component: {fileID: 2510095672818476036}
   m_Layer: 7
   m_Name: Fox
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1530,6 +1530,7 @@ MonoBehaviour:
   debugRay: 0
   outlinedMaterial: {fileID: 2100000, guid: 0e417223d0f72524791ca3250c1384d2, type: 2}
   NormalMaterials: []
+  previousChild: {fileID: 0}
   previousName: 
 --- !u!114 &2510095672818477054
 MonoBehaviour:

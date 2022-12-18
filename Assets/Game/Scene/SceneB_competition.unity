@@ -45151,6 +45151,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fox
       objectReference: {fileID: 0}
+    - target: {fileID: 2510095672818477052, guid: b7b229cbf7e583b41a4797373a0a856b, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 2510095672818477053, guid: b7b229cbf7e583b41a4797373a0a856b, type: 3}
       propertyPath: cameraSettings
       value: 

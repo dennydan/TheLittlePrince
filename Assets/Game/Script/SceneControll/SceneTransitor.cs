@@ -20,7 +20,7 @@ public class SceneTransitor : MonoBehaviour
     {
         print("SceneController_OnTriggerEnter");
         //SceneManager.LoadScene(0);
-        if (other.GetComponent<CharacterController>().name == "Ellen")
+        if (other.GetComponent<CharacterController>().name == "Fox")
         {
             SceneManager.LoadScene(newSceneName);
         }
