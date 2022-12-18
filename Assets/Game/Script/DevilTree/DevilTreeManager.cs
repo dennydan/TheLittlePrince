@@ -95,7 +95,7 @@ public class DevilTreeManager : MonoBehaviour
                 {
                     if(m_state.IsEntering())
                     {
-                        SceneTransitor.LoadNewScene(m_transitSceneName);
+                        //SceneTransitor.LoadNewScene(m_transitSceneName);
                         //Debug.Log("TREE_STATE.End");
                     }
                     break;
