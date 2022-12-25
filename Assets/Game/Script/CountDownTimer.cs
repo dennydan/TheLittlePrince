@@ -7,7 +7,7 @@ public class CountDownTimer : MonoBehaviour
 {
     [SerializeField]
     public float timeRemaining;    //in seconds
-    public bool triggered = true;
+    public bool triggered = false;
     private float minutes, seconds, milliseconds;
 
     TextMeshPro textMesh;

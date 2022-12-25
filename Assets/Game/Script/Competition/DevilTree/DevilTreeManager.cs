@@ -26,9 +26,14 @@ public class DevilTreeManager : MonoBehaviour
     [SerializeField]
     private string m_transitSceneName = "SceneB_cooperation";
 
+    [SerializeField]
+    private CountDown m_countDown;     // count down before game start
+    [SerializeField]
+    private CountDownTimer m_countDownTime;    // competition timer
+
     private int m_timer = 0;
     private StateMachine m_state = new StateMachine((int)TREE_STATE.Init);
-    
+
 
     private void Awake()
     {
@@ -44,7 +49,7 @@ public class DevilTreeManager : MonoBehaviour
 
     private void Start()
     {
-        
+        m_state.NextState((int)TREE_STATE.Init);
     }
 
     void Update()
@@ -55,7 +60,13 @@ public class DevilTreeManager : MonoBehaviour
         {
             case (int)TREE_STATE.Init:
                 {
-                    m_state.NextState(m_state.Current() + 1);
+                    if (m_state.IsEntering())
+                    {
+                        RandonEndPoint();
+                        m_countDown.timeOutCallback = () => {
+                            m_state.NextState(m_state.Current() + 1);
+                        };
+                    }
                     break;
                 }
             case (int)TREE_STATE.Start:
@@ -64,6 +75,7 @@ public class DevilTreeManager : MonoBehaviour
                     {
                         //Debug.Log("TREE_STATE.Init");
                         m_timer = m_spawnTime;
+                        m_countDownTime.triggered = true;
                         m_state.NextState(m_state.Current() + 1);
                     }
                     break;
@@ -124,6 +136,11 @@ public class DevilTreeManager : MonoBehaviour
             m_state.NextState((int)TREE_STATE.Spawn);
         }
             
+    }
+
+    private void RandonEndPoint()
+    {
+        GameManager.end_point =  10 + 5 * Random.Range(0, 2);
     }
     private void ResetData()
     {}

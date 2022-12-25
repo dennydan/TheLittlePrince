@@ -15,6 +15,7 @@ public class TutorialMessage : MonoBehaviour
 
     private int m_messageIndex = 0;
     const int countDownTime = 3;
+    const int waitingParam = 1;
     // Start is called before the first frame update
     void Start()
     {
@@ -49,10 +50,10 @@ public class TutorialMessage : MonoBehaviour
         int second = time;
         while (second > 0)
         {
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(waitingParam);
             second--;
         }
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(waitingParam);
         callback();
     }
 

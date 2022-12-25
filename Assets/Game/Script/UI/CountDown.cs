@@ -13,12 +13,22 @@ public class CountDown : MonoBehaviour
     [SerializeField]
     private GameObject m_countDownText;
 
-    public void Show()
-    {
-        StartCoroutine(StartCountDown(3));
+    private System.Action m_timeOutCallback = ()=> { };
+    public System.Action timeOutCallback { 
+        set
+        {
+            m_timeOutCallback = value;
+        }
     }
 
-    IEnumerator StartCountDown(int time)
+
+    const int waitingParam = 3;
+    public void Show()
+    {
+        StartCoroutine(StartCountDown(()=> { m_timeOutCallback(); },3));
+    }
+
+    IEnumerator StartCountDown(System.Action callback, int time)
     {
         int second = time;
         m_countDownText.SetActive(true);
@@ -30,13 +40,14 @@ public class CountDown : MonoBehaviour
             {
                 countDownImg.sprite = m_countDownSprite[second];
             }
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(waitingParam);
         }
         m_countDownText.SetActive(false);
         m_startText.SetActive(true);
 
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(waitingParam);
         m_startText.SetActive(false);
+        callback();
     }
 
 }

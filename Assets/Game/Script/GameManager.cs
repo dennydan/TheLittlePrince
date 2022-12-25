@@ -8,6 +8,12 @@ using Gamekit3D.GameCommands;
 
 public class GameManager : MonoBehaviour
 {
+    enum LAYER
+    {
+        PC = 7,
+        VR = 8,
+    }
+    
     // 改成單例模式
     public static GameManager Instance;
 
@@ -124,6 +130,16 @@ public class GameManager : MonoBehaviour
             bMissionComlete = true;
             competitionFinish = true;   // Never use from now on but still keep it
         }
+    }
+
+    public bool IsPcPlayer(int playerIndex)
+    {
+        return playerIndex == (int)LAYER.PC;
+    }
+
+    public int GetWinner()
+    {
+        return (PC_tree > VR_tree) ? (int)LAYER.PC : (int)LAYER.VR;
     }
 
     public static void OnCollectStar()
