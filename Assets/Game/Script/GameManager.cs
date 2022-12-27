@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
 using Gamekit3D.GameCommands;
+using Valve.VR.Extras;
 
 public class GameManager : MonoBehaviour
 {
@@ -96,7 +97,7 @@ public class GameManager : MonoBehaviour
 
     //}
 
-    GameObject FindInActiveObjectByName(string name)
+    public static GameObject FindInactiveObjectByName(string name)
     {
         Transform[] objs = Resources.FindObjectsOfTypeAll<Transform>();
         for (int i = 0; i < objs.Length; i++)

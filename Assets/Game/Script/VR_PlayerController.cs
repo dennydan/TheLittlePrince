@@ -11,15 +11,12 @@ public class VR_PlayerController : MonoBehaviour
     private CharacterController characterController;
     protected float m_ForwardSpeed;
 
-    protected Animator m_Animator;
+    public Animator m_Animator;
 
-    private void Awake()
-    {
-        m_Animator = GameObject.Find("Prince").GetComponent<Animator>();
-    }
     private void Start()
     {
         characterController = GetComponent<CharacterController>();
+        m_Animator = GameObject.Find("Prince").GetComponent<Animator>();
     }
 
     // Update is called once per frame

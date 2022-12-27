@@ -320,7 +320,8 @@ MonoBehaviour:
   input:
     actionPath: /actions/default/in/Move
     needsReinit: 0
-  speed: 1
+  speed: 5
+  m_Animator: {fileID: 0}
 --- !u!114 &1791845652
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -333,8 +334,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fbc3c9691c7b88458debe5a4324e560, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputAction:
-    actionPath: /actions/default/in/GrabPinch
+  gripAction:
+    actionPath: 
     needsReinit: 0
   pressTriggerTime: 2
   pressTime: 0
@@ -914,8 +915,8 @@ MonoBehaviour:
     actionPath: /actions/default/out/Haptic
     needsReinit: 1
   uiInteractAction:
-    actionPath: /actions/default/in/InteractUI
-    needsReinit: 1
+    actionPath: /actions/default/in/GrabPinch
+    needsReinit: 0
   useHoverSphere: 1
   hoverSphereTransform: {fileID: 0}
   hoverSphereRadius: 0.05
@@ -1019,8 +1020,8 @@ MonoBehaviour:
     actionPath: /actions/default/out/Haptic
     needsReinit: 1
   uiInteractAction:
-    actionPath: /actions/default/in/InteractUI
-    needsReinit: 1
+    actionPath: /actions/default/in/GrabPinch
+    needsReinit: 0
   useHoverSphere: 1
   hoverSphereTransform: {fileID: 4000012325712216}
   hoverSphereRadius: 0.075
@@ -1159,8 +1160,8 @@ MonoBehaviour:
     actionPath: /actions/default/out/Haptic
     needsReinit: 1
   uiInteractAction:
-    actionPath: /actions/default/in/InteractUI
-    needsReinit: 1
+    actionPath: /actions/default/in/GrabPinch
+    needsReinit: 0
   useHoverSphere: 1
   hoverSphereTransform: {fileID: 480432}
   hoverSphereRadius: 0.075

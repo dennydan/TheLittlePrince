@@ -15,13 +15,9 @@ public class VR_PlayerDig : MonoBehaviour
     public Material outlinedMaterial;
     public Material NormalMaterial;
 
-    private void Awake()
-    {
-        m_Animator = GetComponent<Animator>();
-    }
-
     private void Start()
     {
+        m_Animator = GetComponent<Animator>();
         rightHandLaser = GameObject.Find("RightHand").GetComponent<SteamVR_LaserPointer>();
         rightHandLaser.PointerIn += PointerIn;
         rightHandLaser.PointerOut += PointerOut;
