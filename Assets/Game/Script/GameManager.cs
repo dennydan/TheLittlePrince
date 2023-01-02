@@ -128,7 +128,6 @@ public class GameManager : MonoBehaviour
         if(PC_tree >= end_point || VR_tree >= end_point)    // you win! end game
         {
             PC_tree = VR_tree = 0;
-            bMissionComlete = true;
             competitionFinish = true;   // Never use from now on but still keep it
         }
     }

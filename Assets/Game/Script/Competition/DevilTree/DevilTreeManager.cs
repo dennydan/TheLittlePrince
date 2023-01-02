@@ -1,17 +1,25 @@
 
 using UnityEngine;
+using UnityEngine.UI;
 
 
 
 enum TREE_STATE  {
    Init = 0,
    Start,
-   Spawn ,
+   Spawn,
+   Show_Winner,
    End ,
    Max,
 }
 public class DevilTreeManager : MonoBehaviour
 {
+    enum LAYER
+    {
+        PC = 7,
+        VR = 8,
+    }
+
     const string TREE_TAG = "Devil Trees";
     const int TREE_AMOUNT= 18;
     Transform[] m_treePositions = new Transform[TREE_AMOUNT];
@@ -27,10 +35,19 @@ public class DevilTreeManager : MonoBehaviour
     private string m_transitSceneName = "SceneB_cooperation";
 
     [SerializeField]
-    private UnityEngine.UI.Image m_tutorialImg;
+    private TutorialMessage m_tutorialMsg;
 
     [SerializeField]
-    private Sprite[] m_endPointSprite;
+    private Image m_tutorialImg;
+
+    [SerializeField]
+    private Image m_winnerImage;
+
+    [SerializeField]
+    private Sprite[] m_endPointSprites;
+
+    [SerializeField]
+    private Sprite[] m_winnerSprites;
 
     [SerializeField]
     private CountDown m_countDown;     // count down before game start
@@ -96,7 +113,7 @@ public class DevilTreeManager : MonoBehaviour
                     else if(GameManager.competitionFinish)
                     {
                         // 條件完成，結束
-                        m_state.NextState((int)TREE_STATE.End);
+                        m_state.NextState((int)TREE_STATE.Show_Winner);
                     }
                     else if(m_timer < 0)
                     {
@@ -109,12 +126,30 @@ public class DevilTreeManager : MonoBehaviour
                     }
                     break;
                 }
+            case (int)TREE_STATE.Show_Winner:
+                {
+                    if (m_state.IsEntering())
+                    {
+                        int winnerIndex = GameManager.Instance.GetWinner() == (int)LAYER.PC ? 0 : 1;
+                        m_winnerImage.sprite = m_winnerSprites[winnerIndex];
+                        GameManager.bMissionComlete = true;
+                        m_timer = 1500;
+                    }
+                    else if (m_timer < 0)
+                    {
+                        m_state.NextState((int)TREE_STATE.End);
+                    }
+                    else;
+                    {
+                        m_timer--;
+                    }
+                }
+                break;
             case (int)TREE_STATE.End:
                 {
                     if(m_state.IsEntering())
                     {
-                        //SceneTransitor.LoadNewScene(m_transitSceneName);
-                        //Debug.Log("TREE_STATE.End");
+                        m_tutorialMsg.Next();
                     }
                     break;
                 }
@@ -152,9 +187,9 @@ public class DevilTreeManager : MonoBehaviour
 
         GameManager.end_point =  10 + 5 * randPoint;
 
-        if ( randPoint < m_endPointSprite.Length)
+        if ( randPoint < m_endPointSprites.Length)
         {
-            m_tutorialImg.sprite = m_endPointSprite[randPoint];
+            m_tutorialImg.sprite = m_endPointSprites[randPoint];
         }
     }
 }
