@@ -13,7 +13,7 @@ public class CountDownTimer : MonoBehaviour
     [SerializeField]
     private GameObject m_rock;
     [SerializeField]
-    private int m_rockFillAmount;
+    private float m_rockFillAmount;
 
     [SerializeField]
     private Image m_timeLine;
@@ -66,8 +66,7 @@ public class CountDownTimer : MonoBehaviour
         Debug.Log("SetFillAmount");
         Debug.Log(fillAmount);
         float rockFilAmount = (m_rockFillAmount) * fillAmount;
-        m_rock.transform.position = new Vector3(rockFilAmount, m_rock.transform.position.y, m_rock.transform.position.z);
-
+        m_rock.transform.localPosition = new Vector3(rockFilAmount, 0, 0);
         m_timeLine.fillAmount = fillAmount;
 
         Debug.Log(rockFilAmount);

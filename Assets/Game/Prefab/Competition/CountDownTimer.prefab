@@ -168,7 +168,7 @@ MonoBehaviour:
   timeRemaining: 300
   triggered: 0
   m_rock: {fileID: 5906147404816142368}
-  m_rockFIllAmount: 1300
+  m_rockFillAmount: 1300
   m_timeLine: {fileID: 5906147403767652264}
   textMesh: {fileID: 0}
 --- !u!1 &5906147404816142368

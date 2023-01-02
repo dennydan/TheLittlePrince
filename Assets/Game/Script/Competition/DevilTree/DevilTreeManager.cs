@@ -130,10 +130,12 @@ public class DevilTreeManager : MonoBehaviour
                 {
                     if (m_state.IsEntering())
                     {
+                        Debug.Log("TREE_STATE.Show_Winner");
                         int winnerIndex = GameManager.GetWinner() == (int) LAYER.PC ? 0 : 1;
                         m_winnerImage.sprite = m_winnerSprites[winnerIndex];
                         GameManager.bMissionComlete = true;
-                        m_timer = 600;
+                        m_timer = 420;
+                        GameManager.PC_tree = GameManager.VR_tree = 0;
                     }
                     else if (m_timer < 0)
                     {
@@ -149,6 +151,7 @@ public class DevilTreeManager : MonoBehaviour
                 {
                     if(m_state.IsEntering())
                     {
+                        Debug.Log("TREE_STATE.End");
                         m_tutorialMsg.Next();
                     }
                     break;

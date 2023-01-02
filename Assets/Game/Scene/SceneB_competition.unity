@@ -1060,7 +1060,7 @@ PrefabInstance:
       objectReference: {fileID: 762814714}
     - target: {fileID: 223041052934074154, guid: b4e3a907746ba2f4885c5d082a4019b9, type: 3}
       propertyPath: m_spawnTime
-      value: 200
+      value: 1200
       objectReference: {fileID: 0}
     - target: {fileID: 223041052934074154, guid: b4e3a907746ba2f4885c5d082a4019b9, type: 3}
       propertyPath: m_tutorialImg
@@ -3343,14 +3343,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1421041024}
     m_Modifications:
-    - target: {fileID: 1064904422693950312, guid: c819af6eb100f164ca0eee7aef92b4e5, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3200590083768089677, guid: c819af6eb100f164ca0eee7aef92b4e5, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3708666753744549086, guid: c819af6eb100f164ca0eee7aef92b4e5, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -6914,7 +6906,7 @@ PrefabInstance:
       objectReference: {fileID: 1204145715}
     - target: {fileID: 724452579805251121, guid: 2b0d290fdceedfb47ac97cefd20d7844, type: 3}
       propertyPath: m_rockFillAmount
-      value: 1600
+      value: 1300
       objectReference: {fileID: 0}
     - target: {fileID: 5906147404671385876, guid: 2b0d290fdceedfb47ac97cefd20d7844, type: 3}
       propertyPath: m_Name
