@@ -21,10 +21,16 @@ public class DevilTreeManager : MonoBehaviour
     private DevilTreeHandler pf_devilTree;
 
     [SerializeField]
-    private int m_spawnTime = 300;  // ²@¬í
+    private int m_spawnTime = 1200;  // ²@¬í
 
     [SerializeField]
     private string m_transitSceneName = "SceneB_cooperation";
+
+    [SerializeField]
+    private UnityEngine.UI.Image m_tutorialImg;
+
+    [SerializeField]
+    private Sprite[] m_endPointSprite;
 
     [SerializeField]
     private CountDown m_countDown;     // count down before game start
@@ -140,8 +146,15 @@ public class DevilTreeManager : MonoBehaviour
 
     private void RandonEndPoint()
     {
-        GameManager.end_point =  10 + 5 * Random.Range(0, 2);
+        Debug.Log("RandonEndPoint");
+        int randPoint = Random.Range(0, 2);
+        Debug.Log(randPoint);
+
+        GameManager.end_point =  10 + 5 * randPoint;
+
+        if ( randPoint < m_endPointSprite.Length)
+        {
+            m_tutorialImg.sprite = m_endPointSprite[randPoint];
+        }
     }
-    private void ResetData()
-    {}
 }
