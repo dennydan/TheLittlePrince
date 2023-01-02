@@ -137,7 +137,7 @@ public class GameManager : MonoBehaviour
         return playerIndex == (int)LAYER.PC;
     }
 
-    public int GetWinner()
+    public static int GetWinner()
     {
         return (PC_tree > VR_tree) ? (int)LAYER.PC : (int)LAYER.VR;
     }

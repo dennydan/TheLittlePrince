@@ -130,10 +130,10 @@ public class DevilTreeManager : MonoBehaviour
                 {
                     if (m_state.IsEntering())
                     {
-                        int winnerIndex = GameManager.Instance.GetWinner() == (int)LAYER.PC ? 0 : 1;
+                        int winnerIndex = GameManager.GetWinner() == (int) LAYER.PC ? 0 : 1;
                         m_winnerImage.sprite = m_winnerSprites[winnerIndex];
                         GameManager.bMissionComlete = true;
-                        m_timer = 1500;
+                        m_timer = 600;
                     }
                     else if (m_timer < 0)
                     {

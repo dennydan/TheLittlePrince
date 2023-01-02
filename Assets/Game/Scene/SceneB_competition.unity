@@ -1060,12 +1060,16 @@ PrefabInstance:
       objectReference: {fileID: 762814714}
     - target: {fileID: 223041052934074154, guid: b4e3a907746ba2f4885c5d082a4019b9, type: 3}
       propertyPath: m_spawnTime
-      value: 1200
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 223041052934074154, guid: b4e3a907746ba2f4885c5d082a4019b9, type: 3}
       propertyPath: m_tutorialImg
       value: 
       objectReference: {fileID: 229598836}
+    - target: {fileID: 223041052934074154, guid: b4e3a907746ba2f4885c5d082a4019b9, type: 3}
+      propertyPath: m_tutorialMsg
+      value: 
+      objectReference: {fileID: 762814716}
     - target: {fileID: 223041052934074154, guid: b4e3a907746ba2f4885c5d082a4019b9, type: 3}
       propertyPath: m_winnerImage
       value: 
@@ -3462,6 +3466,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &762814716 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5100317357125953470, guid: c819af6eb100f164ca0eee7aef92b4e5, type: 3}
+  m_PrefabInstance: {fileID: 762814712}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75fa0d69aa7636040aa7f57eaf793b5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &785829305
