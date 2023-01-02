@@ -1,6 +1,7 @@
 using UnityEngine.SceneManagement;
 using UnityEngine;
 using System.Collections;
+using UnityEngine.SpatialTracking;
 
 public class TutorialMessage : MonoBehaviour
 {
@@ -8,7 +9,13 @@ public class TutorialMessage : MonoBehaviour
     private GameObject m_leveTitle;
 
     [SerializeField]
+    private GameObject m_leveTitle_VR;
+
+    [SerializeField]
     private GameObject[] m_messageBoxs;
+
+    [SerializeField]
+    private GameObject[] m_messageBoxs_VR;
 
     [SerializeField]
     private GameObject m_countDown;
@@ -16,6 +23,15 @@ public class TutorialMessage : MonoBehaviour
     private int m_messageIndex = 0;
     const int countDownTime = 3;
     const int waitingParam = 1;
+
+    // VR角色
+    private GameObject VROrigin;
+    private Vector3 VRoriginPos;
+    private Quaternion VRoriginRot;
+    private Vector3 VRtutorialPos = new Vector3(5000f, 5000f, 500f);
+    private Quaternion VRtutorialRot = new Quaternion(0, 180f, 0, 0);
+    private bool VRenabled = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,8 +40,29 @@ public class TutorialMessage : MonoBehaviour
             StartCountDown(() => {
                 Time.timeScale = 0;
                 m_leveTitle.SetActive(false);
+                m_leveTitle_VR.SetActive(false);
                 SetShowMessage(true);
             }, countDownTime);
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        if (!VRenabled)
+        {
+            // VR角色固定位置進行教學
+            VROrigin = GameObject.Find("Player");
+            if (VROrigin == null)
+                Debug.Log("Not Found VR Device.");
+            if (VROrigin != null)
+            {
+                VRenabled = true;
+                VRoriginPos = VROrigin.transform.position;
+                VRoriginRot = VROrigin.transform.rotation;
+                VROrigin.transform.position = VRtutorialPos;
+                VROrigin.transform.rotation = VRtutorialRot;
+                GameObject.Find("VRCamera").GetComponent<TrackedPoseDriver>().enabled = false;
+            }
         }
     }
 
@@ -36,6 +73,7 @@ public class TutorialMessage : MonoBehaviour
         {
             AddMessageIndex();
             SetShowMessage(true);
+            VRenabled = false;
         }
     }
 
@@ -65,6 +103,7 @@ public class TutorialMessage : MonoBehaviour
             return;
         }
         m_messageBoxs[m_messageIndex].SetActive(bEnble);
+        m_messageBoxs_VR[m_messageIndex].SetActive(bEnble);
     }
 
 
@@ -98,5 +137,10 @@ public class TutorialMessage : MonoBehaviour
         if (m_countDown == null) return;
         SetShowMessage(false);
         m_countDown.GetComponent<CountDown>().Show();
+
+        //復原VR位置
+        VROrigin.transform.position = VRoriginPos;
+        VROrigin.transform.rotation = VRoriginRot;
+        GameObject.Find("VRCamera").GetComponent<TrackedPoseDriver>().enabled = true;
     }
 }

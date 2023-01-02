@@ -27,13 +27,18 @@ public class AvatarController : MonoBehaviour
     [SerializeField] Transform ikHead;
     [SerializeField] Vector3 headBodyOffset;
 
-    private void Start()
-    {
-        AvatarController VR_avatar = GameObject.Find("Prince").GetComponent<AvatarController>();
+    private bool VRenabled = false;
 
-        VR_avatar.head.vrTarget = GameObject.Find("VRCamera").transform;
-        VR_avatar.lefthand.vrTarget = GameObject.Find("LeftHand").transform;
-        VR_avatar.righthand.vrTarget = GameObject.Find("RightHand").transform;
+    private void FixedUpdate()
+    {
+        if (!VRenabled)
+        {
+            AvatarController VR_avatar = GameObject.Find("Prince").GetComponent<AvatarController>();
+
+            VR_avatar.head.vrTarget = GameObject.Find("VRCamera").transform;
+            VR_avatar.lefthand.vrTarget = GameObject.Find("LeftHand").transform;
+            VR_avatar.righthand.vrTarget = GameObject.Find("RightHand").transform;
+        }
     }
 
     private void LateUpdate()
