@@ -233,7 +233,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 7603957109233851903}
         m_TargetAssemblyTypeName: SceneTransitor, Assembly-CSharp
         m_MethodName: LoadNewScene
         m_Mode: 5

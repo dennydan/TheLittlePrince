@@ -54,7 +54,7 @@ public class TutorialMessage : MonoBehaviour
             VROrigin = GameObject.Find("Player");
             if (VROrigin == null)
                 Debug.Log("Not Found VR Device.");
-            if (VROrigin != null)
+            else
             {
                 VRenabled = true;
                 VRoriginPos = VROrigin.transform.position;
@@ -79,7 +79,6 @@ public class TutorialMessage : MonoBehaviour
 
     private void StartCountDown(System.Action callback, int time)
     {
-        
         StartCoroutine(CountDown(callback, time));
     }
 

@@ -131,6 +131,9 @@ public class DevilTreeManager : MonoBehaviour
                     if (m_state.IsEntering())
                     {
                         Debug.Log("TREE_STATE.Show_Winner");
+                        GameManager.competitionFinish = false;
+                        Debug.Log("Score: PC=" + GameManager.PC_tree + ", VR=" + GameManager.VR_tree);
+
                         int winnerIndex = GameManager.GetWinner() == (int) LAYER.PC ? 0 : 1;
                         m_winnerImage.sprite = m_winnerSprites[winnerIndex];
                         GameManager.bMissionComlete = true;

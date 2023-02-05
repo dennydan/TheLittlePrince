@@ -45,8 +45,7 @@ public class DevilTreeHandler : MonoBehaviour
     {
         Transform child;
         GameObject go;
-        Vector3 objectPos, objectScale;
-        Quaternion objectRotate;
+        Vector3 objectPos;
 
         if (stage == 1)
             child = this.transform.Find("little sapling");

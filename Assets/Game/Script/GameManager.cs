@@ -27,9 +27,10 @@ public class GameManager : MonoBehaviour
     public static int end_point = 3;    // win point
 
     public static int stars;    // collected stars
+    public static int stars_num = 6;    // Cooperation pass num
 
-    public static int passedQuest;  // you're smart ass
-    public static int pass_num = 3;
+    public static int passedQuest;  // Exploration answered num, you're smart ass
+    public static int pass_num = 12; // Exploration pass num
 
     public static bool competitionFinish = false;
     public static bool bMissionComlete = false;    // Current mission is done and show message.
@@ -111,7 +112,7 @@ public class GameManager : MonoBehaviour
 
         if(PC_tree >= end_point || VR_tree >= end_point)    // you win! end game
         {
-            competitionFinish = true;   // Never use from now on but still keep it
+            competitionFinish = true;
         }
     }
 
@@ -127,7 +128,7 @@ public class GameManager : MonoBehaviour
 
     public static void OnCollectStar()
     {
-        if (++stars >= 6)
+        if (++stars >= stars_num)
         {
             stars = 0;
             bMissionComlete = true;

@@ -6,15 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class SceneTransitor : MonoBehaviour
 {
-
     [SceneName]
     public string newSceneName;
-    // Start is called before the first frame update
-    void Start()
-    {
- 
-        
-    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -24,12 +17,16 @@ public class SceneTransitor : MonoBehaviour
         {
             SceneManager.LoadScene(newSceneName);
         }
-        
     }
 
     //removable
     public static void LoadNewScene(string newScene)
     {
+        // reset score
+        GameManager.PC_tree = 0;
+        GameManager.VR_tree = 0;
+        GameManager.stars = 0;
+        GameManager.passedQuest = 0;
         SceneManager.LoadScene(newScene);
     }
 }

@@ -38,6 +38,11 @@ public class AvatarController : MonoBehaviour
             VR_avatar.head.vrTarget = GameObject.Find("VRCamera").transform;
             VR_avatar.lefthand.vrTarget = GameObject.Find("LeftHand").transform;
             VR_avatar.righthand.vrTarget = GameObject.Find("RightHand").transform;
+
+            if (VR_avatar.head.vrTarget != null &&
+                VR_avatar.lefthand.vrTarget != null &&
+                VR_avatar.lefthand.vrTarget != null)
+                VRenabled = true;
         }
     }
 
