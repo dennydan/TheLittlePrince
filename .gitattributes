@@ -2,3 +2,4 @@
 *.obj filter=lfs diff=lfs merge=lfs -text
 Assets/Game/Resource/**/*.png filter=lfs diff=lfs merge=lfs -text
 Assets/Game/Resource/**/*.fbx filter=lfs diff=lfs merge=lfs -text
+"bunch of flowers.prefab" filter=lfs diff=lfs merge=lfs -text
