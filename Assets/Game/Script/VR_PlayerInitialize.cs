@@ -57,7 +57,7 @@ public class VR_PlayerInitialize : MonoBehaviour
             if (SceneManager.GetActiveScene().name == "SceneA")
             {
                 if (debuglog)
-                    Debug.Log("SceneA");
+                    Debug.Log("Init SceneA");
 
                 VRplayer.GetComponent<CharacterController>().enabled = false;
                 VRplayer.GetComponent<VR_PlayerController>().enabled = false;
@@ -76,7 +76,7 @@ public class VR_PlayerInitialize : MonoBehaviour
             else if (SceneManager.GetActiveScene().name == "SceneB_competition")
             {
                 if (debuglog)
-                    Debug.Log("SceneB");
+                    Debug.Log("Init SceneB_competition");
 
                 VRplayer.GetComponent<CharacterController>().enabled = false;
                 VRplayer.GetComponent<VR_PlayerController>().enabled = false;
@@ -100,7 +100,7 @@ public class VR_PlayerInitialize : MonoBehaviour
             else if (SceneManager.GetActiveScene().name == "SceneB_cooperation")
             {
                 if (debuglog)
-                    Debug.Log("SceneC");
+                    Debug.Log("Init SceneB_cooperation");
 
                 VRplayer.GetComponent<CharacterController>().enabled = false;
                 VRplayer.GetComponent<VR_PlayerController>().enabled = false;
@@ -116,7 +116,7 @@ public class VR_PlayerInitialize : MonoBehaviour
             else if (SceneManager.GetActiveScene().name == "SceneB_exploration")
             {
                 if (debuglog)
-                    Debug.Log("SceneD");
+                    Debug.Log("Init SceneB_exploration");
 
                 VRplayer.GetComponent<CharacterController>().enabled = false;
                 VRplayer.GetComponent<VR_PlayerController>().enabled = false;
