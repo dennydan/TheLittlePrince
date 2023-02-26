@@ -322,6 +322,9 @@ MonoBehaviour:
     needsReinit: 0
   speed: 5
   m_Animator: {fileID: 0}
+  movement: {x: 0, y: 0, z: 0}
+  direction: {x: 0, y: 0, z: 0}
+  debuglog: 0
 --- !u!114 &1791845652
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -47,6 +47,9 @@ public class VR_PlayerInitialize : MonoBehaviour
             }
         }
 
+        if (debuglog)
+            Debug.Log("player rotation: " + VRplayer.transform.rotation);
+
         // Set VR Player Components
         if (VR_enabled)
         {
@@ -62,11 +65,11 @@ public class VR_PlayerInitialize : MonoBehaviour
                 VRplayer.GetComponent<CharacterController>().enabled = false;
                 VRplayer.GetComponent<VR_PlayerController>().enabled = false;
                 VRplayer.transform.position = new Vector3(-16.41f, -10f, 16f);
-                VRplayer.transform.rotation = new Quaternion(0, -104.2f, 0, 0);
+                VRplayer.transform.rotation = new Quaternion(0, 0.70711f, 0, 0.70711f);
                 VRplayer.transform.localScale = new Vector3(10f, 10f, 10f);
 
                 VR_LP.enabled = true;
-                VR_LP.color = Color.black;
+                VR_LP.color = Color.red;
                 VR_LP.m_maxDist = 100f;
                 VR_LP.m_dist = 100f;
                 GameObject.Find("New Game Object").transform.GetChild(0).gameObject.SetActive(true);
@@ -81,7 +84,7 @@ public class VR_PlayerInitialize : MonoBehaviour
                 VRplayer.GetComponent<CharacterController>().enabled = false;
                 VRplayer.GetComponent<VR_PlayerController>().enabled = false;
                 VRplayer.transform.position = new Vector3 (-1.15f, -1.1f, 2.15f);
-                VRplayer.transform.rotation = new Quaternion (0, -180f, 0, 0);
+                VRplayer.transform.rotation = new Quaternion (0, 0, 0, 0);
                 VRplayer.transform.localScale = new Vector3 (1f, 1f, 1f);
                 VRplayer.GetComponent<CharacterController>().enabled = true;
                 VRplayer.GetComponent<CharacterController>().center = new Vector3(0, -0.15f, 0);
@@ -105,7 +108,7 @@ public class VR_PlayerInitialize : MonoBehaviour
                 VRplayer.GetComponent<CharacterController>().enabled = false;
                 VRplayer.GetComponent<VR_PlayerController>().enabled = false;
                 VRplayer.transform.position = new Vector3 (0, 0, -54.9f);
-                VRplayer.transform.rotation = new Quaternion(0, 0, 0, 0);
+                VRplayer.transform.rotation = new Quaternion(0, 1f, 0, 0);
                 VRplayer.transform.localScale = new Vector3(6f, 6f, 6f);
 
                 VR_LP.enabled = false;
@@ -120,8 +123,8 @@ public class VR_PlayerInitialize : MonoBehaviour
 
                 VRplayer.GetComponent<CharacterController>().enabled = false;
                 VRplayer.GetComponent<VR_PlayerController>().enabled = false;
-                VRplayer.transform.position = new Vector3(-0.6f, 11.84058f, 47.5f);
-                VRplayer.transform.rotation = new Quaternion(0, 0, 0, 0);
+                VRplayer.transform.position = new Vector3(3.22f, 10.85f, 46.7f);
+                VRplayer.transform.rotation = new Quaternion(0, -1f, 0, 0);
                 VRplayer.transform.localScale = new Vector3(1f, 1f, 1f);
 
                 VR_LP.enabled = true;
