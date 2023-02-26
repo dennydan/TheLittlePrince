@@ -144,7 +144,7 @@ public class DevilTreeManager : MonoBehaviour
                     {
                         m_state.NextState((int)TREE_STATE.End);
                     }
-                    else;
+                    else
                     {
                         m_timer--;
                     }
