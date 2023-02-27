@@ -33,6 +33,8 @@ public class ExploreUI : MonoBehaviour
     [SerializeField] GameObject[] m_puzzles;
     [SerializeField] GameObject[] m_correctHints;
     [SerializeField] GameObject[] m_wrongHints;
+    [SerializeField] GameObject[] m_optionSpawner;
+    [SerializeField] ExploreAnswerPool m_answerPool;
 
     Question[] m_questions = new Question[Question_Amount];
 
@@ -45,6 +47,7 @@ public class ExploreUI : MonoBehaviour
 
     private int m_puzzleAmount = 0;
     private int m_timer = 0;
+    private bool m_bShowPuzzle = false;
 
     void Start()
     {
@@ -133,7 +136,6 @@ public class ExploreUI : MonoBehaviour
                     if (m_state.IsEntering())
                     {
                         Debug.Log("PickQuestion_State.CheckOption");
-                        int state = (int)PickQuestion_State.PickOption;
                         if (CheckAnswer(m_questionIndex))
                         {
                             bool bPicked = false;
@@ -149,7 +151,7 @@ public class ExploreUI : MonoBehaviour
                                 Debug.Log("CheckOption:" +  m_optionIndex);
                                 m_correctHints[m_optionIndex].SetActive(true);
                                 m_optionArray.Add(m_optionIndex);
-                                state = (int)PickQuestion_State.ShowPuzzle;
+                                m_bShowPuzzle = true;
                                 AddPuzzleAmout();
                             }
                         }
@@ -158,12 +160,10 @@ public class ExploreUI : MonoBehaviour
                             // µª¿ù
                             m_wrongHints[m_optionIndex].SetActive(true);
                         }
-                        m_state.NextState(state);
-                        //m_state.NextState(m_state.Current() + 1);
-                        m_timer = 300;
+                        m_timer = 250;
                     }else if (m_timer < 0)
-                    {
-
+                    { 
+                        m_state.NextState(m_state.Current() + 1);
                     }
                     else
                     {
@@ -178,7 +178,9 @@ public class ExploreUI : MonoBehaviour
                         Debug.Log("PickQuestion_State.FadeOut");
                         m_wrongHints[m_optionIndex].SetActive(false);
                         m_correctHints[m_optionIndex].SetActive(false);
-
+                        int state = m_bShowPuzzle ? (int)PickQuestion_State.ShowPuzzle : (int)PickQuestion_State.PickOption;
+                        m_bShowPuzzle = false;
+                        m_state.NextState(state);
                     }
                 }
                 break;
@@ -188,8 +190,7 @@ public class ExploreUI : MonoBehaviour
                     {
                         Debug.Log("PickQuestion_State.ShowPuzzle");
                         // Show Puzzle Map
-                        m_puzzles[0].SetActive(true);
-                        m_timer = 300;
+                        m_timer = 10;
                     }
                     else if (m_timer < 0)
                     {
@@ -242,11 +243,10 @@ public class ExploreUI : MonoBehaviour
                         Debug.Log("PickQuestion_State.LeavePuzzle");
 
                         
-                        m_timer = 200;
+                        m_timer = 10;
                     }
                     else if(m_timer < 0)
                     {
-                        m_puzzles[0].SetActive(false);
                         int state = IsOptionFinish() ? (int)PickQuestion_State.Start : (int)PickQuestion_State.PickOption;
                         state = IsPuzzleDone() ? (int)PickQuestion_State.End : state;
                         m_state.NextState(state);
