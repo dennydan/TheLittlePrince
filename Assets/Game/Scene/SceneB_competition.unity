@@ -257,6 +257,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 2704c4b763efae442bb0de85fb39c24f, type: 3}
+    - target: {fileID: 5310805849159092752, guid: dc22f67948a8fe04780e4d57a0aadb48, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5310805849159092753, guid: dc22f67948a8fe04780e4d57a0aadb48, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -329,6 +333,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 36330887e11605d4cb18387ed69e2d09, type: 3}
+    - target: {fileID: 5310805849294677917, guid: dc22f67948a8fe04780e4d57a0aadb48, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5310805849294677919, guid: dc22f67948a8fe04780e4d57a0aadb48, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -2627,6 +2635,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 269dccd635e19b04591d3bd9c84711cd, type: 3}
+    - target: {fileID: 5310805849159092752, guid: dc22f67948a8fe04780e4d57a0aadb48, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5310805849159092753, guid: dc22f67948a8fe04780e4d57a0aadb48, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -2667,6 +2679,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 51f77374df88db14cbe6bce9c5329aa9, type: 3}
+    - target: {fileID: 5310805849294677917, guid: dc22f67948a8fe04780e4d57a0aadb48, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5310805849294677919, guid: dc22f67948a8fe04780e4d57a0aadb48, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -3353,6 +3369,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 269dccd635e19b04591d3bd9c84711cd, type: 3}
+    - target: {fileID: 5310805849159092752, guid: dc22f67948a8fe04780e4d57a0aadb48, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5310805849159092753, guid: dc22f67948a8fe04780e4d57a0aadb48, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 5
@@ -3401,6 +3421,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 24cda306b6b0d0a459e7c4d31d20b5cb, type: 3}
+    - target: {fileID: 5310805849294677917, guid: dc22f67948a8fe04780e4d57a0aadb48, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5310805849294677918, guid: dc22f67948a8fe04780e4d57a0aadb48, type: 3}
       propertyPath: m_SizeDelta.x
       value: 400
@@ -3921,6 +3945,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 568798556}
     m_Modifications:
+    - target: {fileID: 13757456857347279, guid: 2ac760ebbfdbf6545926f2b1b2afed8a, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3796177075246189035, guid: 2ac760ebbfdbf6545926f2b1b2afed8a, type: 3}
       propertyPath: m_Name
       value: CountDown
@@ -4011,6 +4039,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6012706949869720775, guid: 2ac760ebbfdbf6545926f2b1b2afed8a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9031598177943918394, guid: 2ac760ebbfdbf6545926f2b1b2afed8a, type: 3}
+      propertyPath: m_RaycastTarget
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -5823,6 +5855,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 26f423dad0ac39342ae1baa8be76f428, type: 3}
+    - target: {fileID: 5310805849159092752, guid: dc22f67948a8fe04780e4d57a0aadb48, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5310805849159092753, guid: dc22f67948a8fe04780e4d57a0aadb48, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -5871,6 +5907,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: c1063a60ca7713a4e8245db899ab7f53, type: 3}
+    - target: {fileID: 5310805849294677917, guid: dc22f67948a8fe04780e4d57a0aadb48, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5310805849294677919, guid: dc22f67948a8fe04780e4d57a0aadb48, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -6889,7 +6929,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   VR_enabled: 0
-  VRplayer: {fileID: 0}
+  VR_player: {fileID: 0}
   VR_LP: {fileID: 0}
   debuglog: 0
 --- !u!4 &1107631868
@@ -7452,6 +7492,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 269dccd635e19b04591d3bd9c84711cd, type: 3}
+    - target: {fileID: 5310805849159092752, guid: dc22f67948a8fe04780e4d57a0aadb48, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5310805849159092753, guid: dc22f67948a8fe04780e4d57a0aadb48, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -7492,6 +7536,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 3ab68d1a7c62d3c49a5d40da9742eddd, type: 3}
+    - target: {fileID: 5310805849294677917, guid: dc22f67948a8fe04780e4d57a0aadb48, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5310805849294677919, guid: dc22f67948a8fe04780e4d57a0aadb48, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -8591,6 +8639,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 269dccd635e19b04591d3bd9c84711cd, type: 3}
+    - target: {fileID: 5310805849159092752, guid: dc22f67948a8fe04780e4d57a0aadb48, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5310805849159092753, guid: dc22f67948a8fe04780e4d57a0aadb48, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 5
@@ -8635,6 +8687,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 0dbe7933a3ad2624bbcac47d2b8adb68, type: 3}
+    - target: {fileID: 5310805849294677917, guid: dc22f67948a8fe04780e4d57a0aadb48, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5310805849510115532, guid: dc22f67948a8fe04780e4d57a0aadb48, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -9285,6 +9341,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 26f423dad0ac39342ae1baa8be76f428, type: 3}
+    - target: {fileID: 5310805849159092752, guid: dc22f67948a8fe04780e4d57a0aadb48, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5310805849159092753, guid: dc22f67948a8fe04780e4d57a0aadb48, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -9321,6 +9381,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: f79cd3afd6ec8e8498ea8cb6a57da6ed, type: 3}
+    - target: {fileID: 5310805849294677917, guid: dc22f67948a8fe04780e4d57a0aadb48, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5310805849294677919, guid: dc22f67948a8fe04780e4d57a0aadb48, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -10642,7 +10706,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:

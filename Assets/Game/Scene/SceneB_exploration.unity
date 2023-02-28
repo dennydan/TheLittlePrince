@@ -414,7 +414,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &87269117
 Transform:
   m_ObjectHideFlags: 0
@@ -423,7 +423,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 87269116}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.4, z: 0}
+  m_LocalPosition: {x: 0.00004863739, y: 2.3999968, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6149,7 +6149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   VR_enabled: 0
-  VR_player: {fileID: 0}
+  VR_player: {fileID: 1791845641}
   VR_LP: {fileID: 0}
   debuglog: 1
 --- !u!4 &1529307938
@@ -6907,7 +6907,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -7756,6 +7756,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 5bc0765d83c9cef41ac65216f59a30ac, type: 3}
+    - target: {fileID: 5310805849159092752, guid: dc22f67948a8fe04780e4d57a0aadb48, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5310805849159092753, guid: dc22f67948a8fe04780e4d57a0aadb48, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
@@ -7800,6 +7804,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 3d32b3a57113c6d40ba432b92bab7fd5, type: 3}
+    - target: {fileID: 5310805849294677917, guid: dc22f67948a8fe04780e4d57a0aadb48, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5310805849510115532, guid: dc22f67948a8fe04780e4d57a0aadb48, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -8564,7 +8572,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 2
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 929346479}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -8671,6 +8679,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2002339241}
     m_Modifications:
+    - target: {fileID: 13757456857347279, guid: 2ac760ebbfdbf6545926f2b1b2afed8a, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3796177075246189035, guid: 2ac760ebbfdbf6545926f2b1b2afed8a, type: 3}
       propertyPath: m_Name
       value: CountDown
@@ -8761,6 +8773,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6012706949869720775, guid: 2ac760ebbfdbf6545926f2b1b2afed8a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9031598177943918394, guid: 2ac760ebbfdbf6545926f2b1b2afed8a, type: 3}
+      propertyPath: m_RaycastTarget
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
