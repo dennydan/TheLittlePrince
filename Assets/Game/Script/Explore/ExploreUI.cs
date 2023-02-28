@@ -83,6 +83,7 @@ public class ExploreUI : MonoBehaviour
         }
 
         ResetHint();
+        m_answerPool.InitAnswer(m_answerArray);
         m_state.NextState((int)TREE_STATE.Init);
     }
 
@@ -111,6 +112,7 @@ public class ExploreUI : MonoBehaviour
 
                         if (PickQuestion(Random.Range(0, Question_Amount - 1)))
                         {
+                            m_answerPool.CreateOptionObject(m_questionIndex);
                             ResetHint();
                             m_state.NextState(m_state.Current() + 1);
                         }

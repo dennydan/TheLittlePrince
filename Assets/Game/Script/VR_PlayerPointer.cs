@@ -7,6 +7,7 @@ using System.Reflection;
 
 public class VR_PlayerPointer : MonoBehaviour
 {
+    [SerializeField] ExploreUI m_explore;
     public SteamVR_Action_Boolean inputAction;
     private SteamVR_LaserPointer rightHandLaser;
     public Transform glowObject;
@@ -30,6 +31,7 @@ public class VR_PlayerPointer : MonoBehaviour
         {
             choosedOptionIndex = (int)char.GetNumericValue(e.target.name.ToCharArray()[7]);
             Debug.Log("VR clicked: " + choosedOptionIndex);
+            m_explore.SetOption(choosedOptionIndex - 1);
         }
 
         //if (e.target.name == "DevilTree(Clone)")
