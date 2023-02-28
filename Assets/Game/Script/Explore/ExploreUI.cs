@@ -142,6 +142,7 @@ public class ExploreUI : MonoBehaviour
                     if (m_state.IsEntering())
                     {
                         Debug.Log("PickQuestion_State.PickOption");
+                        //m_state.NextState((int)PickQuestion_State.End);
                     }
                 }
                 break;
@@ -284,6 +285,12 @@ public class ExploreUI : MonoBehaviour
                         {
                             m_optionSpawner[i].SetActive(false);
                         }
+
+                        for (int i = 0; i < m_amoutImg.Length; ++i)
+                        {
+                            m_amoutImg[i].SetActive(false);
+                        }
+
                         m_resultView.SetActive(true);
                         m_timer = 500;
                     }
