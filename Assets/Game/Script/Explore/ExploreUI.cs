@@ -279,6 +279,11 @@ public class ExploreUI : MonoBehaviour
                     {
                         Debug.Log("PickQuestion_State.End");
                         m_puzzles[0].SetActive(false);
+                        m_exploreNode.SetActive(false);
+                        for (int i = 0; i < m_optionSpawner.Length; ++i)
+                        {
+                            m_optionSpawner[i].SetActive(false);
+                        }
                         m_resultView.SetActive(true);
                         m_timer = 350;
                     }
