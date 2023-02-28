@@ -85,7 +85,6 @@ public class ExploreAnswerPool : MonoBehaviour
                 wrongOptions[wrongIndex].transform.position = m_optionNode[i].transform.position;
                 wrongIndex++;
             }
-
         }
     }
 }

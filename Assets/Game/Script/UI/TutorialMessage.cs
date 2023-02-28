@@ -35,6 +35,7 @@ public class TutorialMessage : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Time.timeScale = 1;
         if (m_leveTitle != null)
         {
             StartCountDown(() => {

@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 
 struct Question {
     public GameObject titleObject;
@@ -21,6 +21,7 @@ enum PickQuestion_State {
     AddPuzzle,
     LeavePuzzle,
     End,
+    Leave,
 }
 
 public class ExploreUI : MonoBehaviour
@@ -35,6 +36,9 @@ public class ExploreUI : MonoBehaviour
     [SerializeField] GameObject[] m_wrongHints;
     [SerializeField] GameObject[] m_optionSpawner;
     [SerializeField] ExploreAnswerPool m_answerPool;
+    [SerializeField] GameObject m_exploreNode;
+    [SerializeField] GameObject m_resultView;
+    [SerializeField] GameObject m_leaveView;
 
     Question[] m_questions = new Question[Question_Amount];
 
@@ -85,6 +89,15 @@ public class ExploreUI : MonoBehaviour
         ResetHint();
         m_answerPool.InitAnswer(m_answerArray);
         m_state.NextState((int)TREE_STATE.Init);
+
+        m_exploreNode.transform.localScale = new Vector3(0, 0, 0);
+
+        gameObject.transform.parent.GetComponentInChildren<CountDown>().timeOutCallback = ()=>
+        {
+            StartQuestion();
+        };
+        m_resultView.SetActive(false);
+        m_leaveView.SetActive(false);
     }
 
     // Update is called once per frame
@@ -98,7 +111,7 @@ public class ExploreUI : MonoBehaviour
                     if (m_state.IsEntering())
                     {
                         Debug.Log("PickQuestion_State.Init");
-                        StartQuestion();  // 之後放到ExploreProcess
+  
                     }
                 }
                 break;
@@ -107,6 +120,7 @@ public class ExploreUI : MonoBehaviour
                     if (m_state.IsEntering())
                     {
                         Debug.Log("PickQuestion_State.Start");
+                        m_exploreNode.transform.localScale = new Vector3(1, 1, 1);
                         m_optionArray.Clear();
                         CloseAllTitles();
 
@@ -245,7 +259,7 @@ public class ExploreUI : MonoBehaviour
                         Debug.Log("PickQuestion_State.LeavePuzzle");
 
                         
-                        m_timer = 10;
+                        m_timer = 100;
                     }
                     else if(m_timer < 0)
                     {
@@ -264,7 +278,36 @@ public class ExploreUI : MonoBehaviour
                     if (m_state.IsEntering())
                     {
                         Debug.Log("PickQuestion_State.End");
-                        //m_state.NextState(m_state.Current() + 1);
+                        m_puzzles[0].SetActive(false);
+                        m_resultView.SetActive(true);
+                        m_timer = 350;
+                    }
+                    else if (m_timer < 0)
+                    {
+                        m_resultView.SetActive(false);
+                        m_state.NextState(m_state.Current() + 1);
+                    }
+                    else
+                    {
+                        m_timer--;
+                    }
+                }
+                break;
+            case (int)PickQuestion_State.Leave:
+                {
+                    if (m_state.IsEntering())
+                    {
+                        Debug.Log("PickQuestion_State.Leave");
+                        m_leaveView.SetActive(true);
+                        m_timer = 500;
+                    }
+                    else if (m_timer < 0)
+                    {
+                        SceneManager.LoadScene("SceneStart");
+                    }
+                    else
+                    {
+                        m_timer--;
                     }
                 }
                 break;
@@ -369,4 +412,8 @@ public class ExploreUI : MonoBehaviour
         m_puzzleAmount++;
     }
 
+    public void Leave()
+    {
+
+    }
 }
