@@ -142,7 +142,6 @@ public class ExploreUI : MonoBehaviour
                     if (m_state.IsEntering())
                     {
                         Debug.Log("PickQuestion_State.PickOption");
-
                     }
                 }
                 break;
@@ -152,6 +151,7 @@ public class ExploreUI : MonoBehaviour
                     if (m_state.IsEntering())
                     {
                         Debug.Log("PickQuestion_State.CheckOption");
+                        
                         if (CheckAnswer(m_questionIndex))
                         {
                             bool bPicked = false;
@@ -278,14 +278,14 @@ public class ExploreUI : MonoBehaviour
                     if (m_state.IsEntering())
                     {
                         Debug.Log("PickQuestion_State.End");
+                        CloseAllTitles();
                         m_puzzles[0].SetActive(false);
-                        m_exploreNode.SetActive(false);
                         for (int i = 0; i < m_optionSpawner.Length; ++i)
                         {
                             m_optionSpawner[i].SetActive(false);
                         }
                         m_resultView.SetActive(true);
-                        m_timer = 350;
+                        m_timer = 500;
                     }
                     else if (m_timer < 0)
                     {
@@ -304,7 +304,7 @@ public class ExploreUI : MonoBehaviour
                     {
                         Debug.Log("PickQuestion_State.Leave");
                         m_leaveView.SetActive(true);
-                        m_timer = 500;
+                        m_timer = 600;
                     }
                     else if (m_timer < 0)
                     {
