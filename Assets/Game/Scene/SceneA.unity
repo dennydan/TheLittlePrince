@@ -1916,7 +1916,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1687960939}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3990,7 +3990,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8647747688230626299, guid: bc6ef1b8eb71dba4aba409820bf585bc, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8647747688230626299, guid: bc6ef1b8eb71dba4aba409820bf585bc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4924,7 +4924,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   VR_enabled: 0
-  VRplayer: {fileID: 0}
+  VR_player: {fileID: 0}
   VR_LP: {fileID: 0}
   debuglog: 1
 --- !u!4 &1587483033
@@ -5515,8 +5515,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children:
-  - {fileID: 1045125975}
   - {fileID: 480779887}
+  - {fileID: 1045125975}
   m_Father: {fileID: 1026707270}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

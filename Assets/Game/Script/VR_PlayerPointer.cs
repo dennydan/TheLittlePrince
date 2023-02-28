@@ -7,7 +7,7 @@ using System.Reflection;
 
 public class VR_PlayerPointer : MonoBehaviour
 {
-    [SerializeField] ExploreUI m_explore;
+    public ExploreUI m_explore;
     public SteamVR_Action_Boolean inputAction;
     private SteamVR_LaserPointer rightHandLaser;
     public Transform glowObject;

@@ -132,7 +132,8 @@ MonoBehaviour:
   m_leveTitle_VR: {fileID: 0}
   m_messageBoxs:
   - {fileID: 1903430365357791553}
-  m_messageBoxs_VR: []
+  m_messageBoxs_VR:
+  - {fileID: 0}
   m_countDown: {fileID: 601565026888346093}
 --- !u!1001 &4393132637720256518
 PrefabInstance:
@@ -290,12 +291,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5310805849159092754, guid: dc22f67948a8fe04780e4d57a0aadb48, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -300
+      value: -256
       objectReference: {fileID: 0}
     - target: {fileID: 5310805849294677917, guid: dc22f67948a8fe04780e4d57a0aadb48, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 0c4d3e5f09edbfc44891397ee5343b5b, type: 3}
+      objectReference: {fileID: 21300000, guid: 3d32b3a57113c6d40ba432b92bab7fd5, type: 3}
     - target: {fileID: 5310805849510115532, guid: dc22f67948a8fe04780e4d57a0aadb48, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
