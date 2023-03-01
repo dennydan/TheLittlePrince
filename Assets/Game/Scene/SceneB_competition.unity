@@ -6929,7 +6929,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   VR_enabled: 0
-  VR_player: {fileID: 0}
+  VR_player: {fileID: 1107820211}
   VR_LP: {fileID: 0}
   debuglog: 0
 --- !u!4 &1107631868
@@ -7049,6 +7049,11 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 1791845653, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+--- !u!1 &1107820211 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 107946, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+  m_PrefabInstance: {fileID: 1107820210}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1111693730
 GameObject:
   m_ObjectHideFlags: 0

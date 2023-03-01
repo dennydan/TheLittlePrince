@@ -14,7 +14,6 @@ public class VR_PlayerInitialize : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        VR_player = GameObject.Find("Player");
         if (debuglog)
         {
             try
@@ -28,23 +27,18 @@ public class VR_PlayerInitialize : MonoBehaviour
         }
 
         // Initialize VR Player
-        if (VR_player)
+        if (GameObject.Find("Player") != null)
         {
+            if (debuglog)
+                Debug.Log("already have Player");
+            VR_player = GameObject.Find("Player");
             VR_enabled = true;
-            if (debuglog)
-                Debug.Log("player true");
         }
-
-        if (!VR_enabled)
+        else
         {
-            if (debuglog)
-                Debug.Log("enable a player");
-            VR_player = FindInactiveObjectByName("Player");
-            if (VR_player != null)
-            {
-                VR_player.SetActive(true);
-                VR_enabled = true;
-            }
+            Debug.Log("no player, use specific one.");
+            VR_player.SetActive(true);
+            VR_enabled = true;
         }
 
         if (debuglog)
