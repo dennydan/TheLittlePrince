@@ -22,6 +22,7 @@ public class SceneTransitor : MonoBehaviour
     //removable
     public static void LoadNewScene(string newScene)
     {
+        Time.timeScale = 1;
         // reset score
         GameManager.PC_tree = 0;
         GameManager.VR_tree = 0;
