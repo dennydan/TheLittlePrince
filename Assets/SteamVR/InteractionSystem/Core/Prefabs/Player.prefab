@@ -313,15 +313,24 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 107946}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c8d7a023a5bd876419b937b7f64f528d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  input:
-    actionPath: /actions/default/in/Move
+  inputUp:
+    actionPath: /actions/default/in/MoveUp
     needsReinit: 0
-  speed: 5
+  inputDown:
+    actionPath: /actions/default/in/MoveDown
+    needsReinit: 0
+  inputLeft:
+    actionPath: /actions/default/in/MoveLeft
+    needsReinit: 0
+  inputRight:
+    actionPath: /actions/default/in/MoveRight
+    needsReinit: 0
+  speed: 3
   m_Animator: {fileID: 0}
   movement: {x: 0, y: 0, z: 0}
   direction: {x: 0, y: 0, z: 0}

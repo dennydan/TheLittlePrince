@@ -29,7 +29,7 @@ public class TutorialMessage : MonoBehaviour
     private Vector3 VRoriginPos;
     private Quaternion VRoriginRot;
     private Vector3 VRtutorialPos = new Vector3(5000f, 5000f, 500f);
-    private Quaternion VRtutorialRot = new Quaternion(0, 180f, 0, 0);
+    private Quaternion VRtutorialRot = new Quaternion(0, 1f, 0, 0);
     private bool VRenabled = false;
 
     // Start is called before the first frame update

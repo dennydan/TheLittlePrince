@@ -2540,8 +2540,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8d7a023a5bd876419b937b7f64f528d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  input:
-    actionPath: /actions/default/in/Move
+  inputUp:
+    actionPath: 
+    needsReinit: 0
+  inputDown:
+    actionPath: 
+    needsReinit: 0
+  inputLeft:
+    actionPath: 
+    needsReinit: 0
+  inputRight:
+    actionPath: 
     needsReinit: 0
   speed: 1
   m_Animator: {fileID: 0}
@@ -7411,8 +7420,8 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1791845644, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
-      propertyPath: speed
-      value: 5
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1791845647, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
       propertyPath: m_Height
