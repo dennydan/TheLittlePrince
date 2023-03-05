@@ -32,6 +32,11 @@ public class VR_PlayerPointer : MonoBehaviour
             choosedOptionIndex = (int)char.GetNumericValue(e.target.name.ToCharArray()[7]);
             Debug.Log("VR clicked: " + choosedOptionIndex);
             m_explore.SetOption(choosedOptionIndex - 1);
+        }else if (e.target.name.Contains("ConfirmResult")){
+            m_explore.ShowResultView(false);
+            m_explore.ShowLeaveView();
+        }else if(e.target.name.Contains("ConfirmLeave")){
+            m_explore.Leave();
         }
 
         //if (e.target.name == "DevilTree(Clone)")

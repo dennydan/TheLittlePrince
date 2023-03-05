@@ -37,8 +37,8 @@ public class ExploreUI : MonoBehaviour
     [SerializeField] GameObject[] m_optionSpawner;
     [SerializeField] ExploreAnswerPool m_answerPool;
     [SerializeField] GameObject m_exploreNode;
-    [SerializeField] GameObject m_resultView;
-    [SerializeField] GameObject m_leaveView;
+    [SerializeField] GameObject[] m_resultView;  // PC And VR
+    [SerializeField] GameObject[] m_leaveView;   // PC And VR
 
     Question[] m_questions = new Question[Question_Amount];
 
@@ -96,8 +96,8 @@ public class ExploreUI : MonoBehaviour
         {
             StartQuestion();
         };
-        m_resultView.SetActive(false);
-        m_leaveView.SetActive(false);
+        ShowResultView(false);
+        ShowLeaveView(false);
     }
 
     // Update is called once per frame
@@ -291,17 +291,7 @@ public class ExploreUI : MonoBehaviour
                             m_amoutImg[i].SetActive(false);
                         }
 
-                        m_resultView.SetActive(true);
-                        m_timer = 500;
-                    }
-                    else if (m_timer < 0)
-                    {
-                        m_resultView.SetActive(false);
-                        m_state.NextState(m_state.Current() + 1);
-                    }
-                    else
-                    {
-                        m_timer--;
+                        ShowResultView();
                     }
                 }
                 break;
@@ -310,12 +300,12 @@ public class ExploreUI : MonoBehaviour
                     if (m_state.IsEntering())
                     {
                         Debug.Log("PickQuestion_State.Leave");
-                        m_leaveView.SetActive(true);
+                        ShowLeaveView();
                         m_timer = 600;
                     }
                     else if (m_timer < 0)
                     {
-                        SceneManager.LoadScene("SceneStart");
+                        Leave();
                     }
                     else
                     {
@@ -424,8 +414,24 @@ public class ExploreUI : MonoBehaviour
         m_puzzleAmount++;
     }
 
+    public void ShowResultView(bool bActive = true)
+    {
+        for (int i = 0; i < m_resultView.Length; ++i)
+        {
+            m_resultView[i].SetActive(bActive);
+        }
+    }
+
+    public void ShowLeaveView(bool bActive = true)
+    {
+        for (int i = 0; i < m_leaveView.Length; ++i)
+        {
+            m_leaveView[i].SetActive(bActive);
+        }
+    }
+
     public void Leave()
     {
-
+        SceneManager.LoadScene("SceneStart");
     }
 }
