@@ -1,6 +1,7 @@
 
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 
 
@@ -29,7 +30,7 @@ public class DevilTreeManager : MonoBehaviour
     private DevilTreeHandler pf_devilTree;
 
     [SerializeField]
-    private int m_spawnTime = 1200;  // ²@¬í
+    private int m_spawnTime = 600;  // ²@¬í
 
     [SerializeField]
     private string m_transitSceneName = "SceneB_cooperation";
@@ -54,6 +55,12 @@ public class DevilTreeManager : MonoBehaviour
     [SerializeField]
     private CountDownTimer m_countDownTime;    // competition timer
 
+    [SerializeField]
+    private TextMeshPro m_foxTreeAmount;
+
+    [SerializeField]
+    private TextMeshPro m_princeTreeAmount;
+
     private int m_timer = 0;
     private StateMachine m_state = new StateMachine((int)TREE_STATE.Init);
 
@@ -77,9 +84,9 @@ public class DevilTreeManager : MonoBehaviour
 
     void Update()
     {
-        int currentState = m_state.Tick();        
-
-        switch(currentState)
+        int currentState = m_state.Tick();
+        UpdateDigTreeAmout();
+        switch (currentState)
         {
             case (int)TREE_STATE.Init:
                 {
@@ -197,5 +204,11 @@ public class DevilTreeManager : MonoBehaviour
         {
             m_tutorialImg.sprite = m_endPointSprites[randPoint];
         }
+    }
+
+    private void UpdateDigTreeAmout()
+    {
+        m_princeTreeAmount.text = GameManager.VR_tree.ToString();
+        m_foxTreeAmount.text = GameManager.PC_tree.ToString();
     }
 }
