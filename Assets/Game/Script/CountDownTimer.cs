@@ -63,12 +63,12 @@ public class CountDownTimer : MonoBehaviour
 
     private void SetFillAmount(float fillAmount)
     {
-        //Debug.Log("SetFillAmount");
-        //Debug.Log(fillAmount);
+        Debug.Log("SetFillAmount");
+        Debug.Log(fillAmount);
         float rockFilAmount = (m_rockFillAmount) * fillAmount;
         m_rock.transform.localPosition = new Vector3(rockFilAmount, 0, 0);
         m_timeLine.fillAmount = fillAmount;
 
-        //Debug.Log(rockFilAmount);
+        Debug.Log(rockFilAmount);
     }
 }

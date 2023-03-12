@@ -209,6 +209,17 @@ MonoBehaviour:
   m_correctOrWrongClip:
   - {fileID: 8300000, guid: 523be56ffb75c22418947719098a1ccc, type: 3}
   - {fileID: 8300000, guid: e68b5d7426f105e45ba0d1c2796a0159, type: 3}
+  m_questionClips:
+  - {fileID: 8300000, guid: aefb82006ef51794ba03e84c9c225ef9, type: 3}
+  - {fileID: 8300000, guid: 18de95eadc4defd47b7c5131e5994850, type: 3}
+  - {fileID: 8300000, guid: 7b2142acab25e9544b68f3fda10dcd94, type: 3}
+  - {fileID: 8300000, guid: e1e18ee919165e24cbfd5449cca6e550, type: 3}
+  - {fileID: 8300000, guid: a9ba61e4c92d6a141bbf9b117925cd34, type: 3}
+  - {fileID: 8300000, guid: fbcaa39c6dfb0a649a8c1fc99208dc17, type: 3}
+  - {fileID: 8300000, guid: 7d3f4a468c91dae47963cf83a9be6857, type: 3}
+  - {fileID: 8300000, guid: 387dd96409189fd4ab27411c2566a783, type: 3}
+  - {fileID: 8300000, guid: 5eb932ed3064bac40b181e1d335ef927, type: 3}
+  - {fileID: 8300000, guid: ac7666c7eab460143abbee8c93513551, type: 3}
 --- !u!82 &7393199798359498609
 AudioSource:
   m_ObjectHideFlags: 0
