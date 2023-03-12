@@ -225,8 +225,8 @@ public class TutorialMessage : MonoBehaviour
     public void CountDownAndStart()
     {
         Time.timeScale = 1;
-        if (m_countDown == null) return;
         SetShowMessage(false);
+        if (m_countDown == null) return;
         m_countDown.GetComponent<CountDown>().Show();
 
         //¥_≠ÏVR¶Ï∏m
