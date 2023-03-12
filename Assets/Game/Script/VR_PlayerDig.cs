@@ -14,6 +14,10 @@ public class VR_PlayerDig : MonoBehaviour
     public Transform glowObject;
     public Material outlinedMaterial;
     public Material NormalMaterial;
+    public AudioSource chopSound;
+    private float chopPitch;
+    private float lowPitchRange = .95f;
+    private float highPitchRange = 1.05f;
 
     private void Start()
     {
@@ -78,6 +82,8 @@ public class VR_PlayerDig : MonoBehaviour
     }
     void DigTree()
     {
+        chopSound.pitch = chopPitch * Random.Range(lowPitchRange, highPitchRange);
+        chopSound.Play();
         devilTree.OnDig(this.name);
     }
 }

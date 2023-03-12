@@ -1507,12 +1507,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2510095672818477052}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9b33b0ca3f3b78345aa99c998c242ebb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   choosed: {fileID: 2510095672818477055}
+  chopSound: {fileID: 0}
 --- !u!114 &2510095672818477055
 MonoBehaviour:
   m_ObjectHideFlags: 0

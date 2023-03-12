@@ -20,6 +20,9 @@ public class TutorialMessage : MonoBehaviour
     [SerializeField]
     private GameObject m_countDown;
 
+    [SerializeField]
+    private AudioClip[] m_tutorRecords;
+
     private int m_messageIndex = 0;
     const int countDownTime = 3;
     const int waitingParam = 1;
@@ -31,6 +34,7 @@ public class TutorialMessage : MonoBehaviour
     private Vector3 VRtutorialPos = new Vector3(5000f, 5000f, 500f);
     private Quaternion VRtutorialRot = new Quaternion(0, 1f, 0, 0);
     private bool VRenabled = false;
+    private AudioSource VRaudioSource;
 
     // Start is called before the first frame update
     void Start()
@@ -63,6 +67,21 @@ public class TutorialMessage : MonoBehaviour
                 VROrigin.transform.position = VRtutorialPos;
                 VROrigin.transform.rotation = VRtutorialRot;
                 GameObject.Find("VRCamera").GetComponent<TrackedPoseDriver>().enabled = false;
+            }
+        }
+
+        if (VRaudioSource == null)
+        {
+            // this can be added no matter VR enable or not.
+            try
+            {
+                VRaudioSource = GameObject.Find("FollowHead").GetComponent<AudioSource>();
+                Debug.Log("audio added.");
+            }
+            catch   // for SceneStart
+            {
+                VRaudioSource = GameObject.Find("Main Camera").GetComponent<AudioSource>();
+                Debug.Log("Start audio added.");
             }
         }
     }
@@ -102,6 +121,78 @@ public class TutorialMessage : MonoBehaviour
             print("Out_Of_Range[Next()]");
             return;
         }
+
+        // Play Audio Record Clips
+        //GetComponent<AudioSource>().Stop(); // cut previous clip if you click too fast.
+        //FIXME: Volume is LOW when playing in unity.
+        //I place audio source on canvas UI, a gameObject, or even camera itself won't fix it.
+        //Both change the mp3 file and parameters in audio source didn't help.
+        //I use a audio mixer to amplify the volume if we want a louder sound, but +20 dB will hear a little break voice, so set to +10 dB for now.
+        if (bEnble)
+        {
+            if (SceneManager.GetActiveScene().name == "SceneB_cooperation")
+            {
+                Debug.Log("audio: SceneB_cooperation, idx: " + m_messageIndex);
+                switch (m_messageIndex)
+                {
+                    case 1:
+                        VRaudioSource.clip = m_tutorRecords[1];
+                        VRaudioSource.Play();
+                        StartCoroutine(waitForSound(m_tutorRecords[4])); // need to stuck here, but cannot use "while" or the game will crash
+                        break;
+                    case 2:
+                        // do nothing
+                        break;
+                    case 3:
+                        VRaudioSource.clip = m_tutorRecords[2];
+                        VRaudioSource.Play();
+                        break;
+                    case 4:
+                        VRaudioSource.clip = m_tutorRecords[3];
+                        VRaudioSource.Play();
+                        break;
+                    default:
+                        VRaudioSource.clip = m_tutorRecords[m_messageIndex];
+                        VRaudioSource.Play();
+                        break;
+                }
+            }
+            else if (SceneManager.GetActiveScene().name == "SceneB_competition")
+            {
+                Debug.Log("audio: SceneB_competition, idx: " + m_messageIndex);
+                switch (m_messageIndex)
+                {
+                    case 2:
+                        VRaudioSource.clip = m_tutorRecords[2];
+                        VRaudioSource.Play();
+                        StartCoroutine(waitForSound(m_tutorRecords[6]));
+                        break;
+                    case 4: // choose m_tutorRecords[4/7/8] with amount 10/15/20
+                        break;
+                    case 5: // show winner badge
+                        // do nothing
+                        break;
+                    case 6:
+                        VRaudioSource.clip = m_tutorRecords[5];
+                        VRaudioSource.Play();
+                        break;
+                    default:
+                        VRaudioSource.clip = m_tutorRecords[m_messageIndex];
+                        VRaudioSource.Play();
+                        break;
+                }
+            }
+            else
+            {
+                VRaudioSource.clip = m_tutorRecords[m_messageIndex];
+                VRaudioSource.Play();
+            }
+        }
+        else
+        {
+            VRaudioSource.Stop();
+        }
+
         m_messageBoxs[m_messageIndex].SetActive(bEnble);
         m_messageBoxs_VR[m_messageIndex].SetActive(bEnble);
     }
@@ -142,5 +233,17 @@ public class TutorialMessage : MonoBehaviour
         VROrigin.transform.position = VRoriginPos;
         VROrigin.transform.rotation = VRoriginRot;
         GameObject.Find("VRCamera").GetComponent<TrackedPoseDriver>().enabled = true;
+    }
+
+    IEnumerator waitForSound(AudioClip audioClip)
+    {
+        while(VRaudioSource.isPlaying)
+        {
+            yield return null;
+        }
+
+        // Audio has finished playing
+        VRaudioSource.clip = audioClip;
+        VRaudioSource.PlayDelayed(1f);  // delay 44100 samples as 1 second
     }
 }

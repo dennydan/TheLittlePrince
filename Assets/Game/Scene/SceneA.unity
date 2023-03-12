@@ -3521,7 +3521,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &856759771
 Transform:
   m_ObjectHideFlags: 0
@@ -13328,6 +13328,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newSceneName: SceneB_competition
+  transAudioClips: {fileID: 8300000, guid: 5f1c065c7115da74b973e7329ef2983c, type: 3}
 --- !u!33 &6620806984304697491
 MeshFilter:
   m_ObjectHideFlags: 0

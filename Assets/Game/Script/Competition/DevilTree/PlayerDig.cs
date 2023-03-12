@@ -8,10 +8,15 @@ public class PlayerDig : MonoBehaviour
     protected Animator m_Animator;
     readonly int m_HashChop = Animator.StringToHash("Chop");
     protected DevilTreeHandler devilTree;
+    public AudioSource chopSound;
+    private float chopPitch;
+    private float lowPitchRange = .95f;
+    private float highPitchRange = 1.05f;
 
     private void Start()
     {
         choosed = GetComponent<ChoosingFromRaycast>();
+        chopPitch = chopSound.pitch;
     }
 
     private void Awake()
@@ -41,6 +46,8 @@ public class PlayerDig : MonoBehaviour
 
     void DigTree()
     {
+        chopSound.pitch = chopPitch * Random.Range(lowPitchRange,highPitchRange);
+        chopSound.Play();
         devilTree.OnDig(this.name);
     }
 }

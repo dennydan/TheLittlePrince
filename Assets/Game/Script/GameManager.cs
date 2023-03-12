@@ -36,7 +36,6 @@ public class GameManager : MonoBehaviour
     public static bool bMissionComlete = false;    // Current mission is done and show message.
     public static string version = "v0.4.0";
 
-
     private void Awake()
     {
         if (Instance == null)
@@ -136,6 +135,7 @@ public class GameManager : MonoBehaviour
             bMissionComlete = true;
             //SceneTransitor.LoadNewScene("SceneB_exploration");
         }
+        GameObject.Find("Fox").GetComponent<AudioSource>().Play();
     }
 
     public void OnPassExQuestion()

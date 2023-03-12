@@ -836,8 +836,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8d7a023a5bd876419b937b7f64f528d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  input:
-    actionPath: /actions/default/in/Move
+  inputUp:
+    actionPath: 
+    needsReinit: 0
+  inputDown:
+    actionPath: 
+    needsReinit: 0
+  inputLeft:
+    actionPath: 
+    needsReinit: 0
+  inputRight:
+    actionPath: 
     needsReinit: 0
   speed: 1
   m_Animator: {fileID: 0}
@@ -6088,6 +6097,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   choosed: {fileID: 0}
+  chopSound: {fileID: 0}
 --- !u!1 &1454735392
 GameObject:
   m_ObjectHideFlags: 0
@@ -6776,6 +6786,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1648642398}
     - target: {fileID: 4303959982843160880, guid: 3e67a658393f9cb4e803828d34b1aa0c, type: 3}
+      propertyPath: m_questionClips.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4303959982843160880, guid: 3e67a658393f9cb4e803828d34b1aa0c, type: 3}
       propertyPath: m_resultView.Array.data[0]
       value: 
       objectReference: {fileID: 1900768817}
@@ -6843,6 +6857,46 @@ PrefabInstance:
       propertyPath: m_optionSpawner.Array.data[4]
       value: 
       objectReference: {fileID: 2085802304}
+    - target: {fileID: 4303959982843160880, guid: 3e67a658393f9cb4e803828d34b1aa0c, type: 3}
+      propertyPath: m_questionClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: aefb82006ef51794ba03e84c9c225ef9, type: 3}
+    - target: {fileID: 4303959982843160880, guid: 3e67a658393f9cb4e803828d34b1aa0c, type: 3}
+      propertyPath: m_questionClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 18de95eadc4defd47b7c5131e5994850, type: 3}
+    - target: {fileID: 4303959982843160880, guid: 3e67a658393f9cb4e803828d34b1aa0c, type: 3}
+      propertyPath: m_questionClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 7b2142acab25e9544b68f3fda10dcd94, type: 3}
+    - target: {fileID: 4303959982843160880, guid: 3e67a658393f9cb4e803828d34b1aa0c, type: 3}
+      propertyPath: m_questionClips.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: e1e18ee919165e24cbfd5449cca6e550, type: 3}
+    - target: {fileID: 4303959982843160880, guid: 3e67a658393f9cb4e803828d34b1aa0c, type: 3}
+      propertyPath: m_questionClips.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: a9ba61e4c92d6a141bbf9b117925cd34, type: 3}
+    - target: {fileID: 4303959982843160880, guid: 3e67a658393f9cb4e803828d34b1aa0c, type: 3}
+      propertyPath: m_questionClips.Array.data[5]
+      value: 
+      objectReference: {fileID: 8300000, guid: fbcaa39c6dfb0a649a8c1fc99208dc17, type: 3}
+    - target: {fileID: 4303959982843160880, guid: 3e67a658393f9cb4e803828d34b1aa0c, type: 3}
+      propertyPath: m_questionClips.Array.data[6]
+      value: 
+      objectReference: {fileID: 8300000, guid: 7d3f4a468c91dae47963cf83a9be6857, type: 3}
+    - target: {fileID: 4303959982843160880, guid: 3e67a658393f9cb4e803828d34b1aa0c, type: 3}
+      propertyPath: m_questionClips.Array.data[7]
+      value: 
+      objectReference: {fileID: 8300000, guid: 387dd96409189fd4ab27411c2566a783, type: 3}
+    - target: {fileID: 4303959982843160880, guid: 3e67a658393f9cb4e803828d34b1aa0c, type: 3}
+      propertyPath: m_questionClips.Array.data[8]
+      value: 
+      objectReference: {fileID: 8300000, guid: 5eb932ed3064bac40b181e1d335ef927, type: 3}
+    - target: {fileID: 4303959982843160880, guid: 3e67a658393f9cb4e803828d34b1aa0c, type: 3}
+      propertyPath: m_questionClips.Array.data[9]
+      value: 
+      objectReference: {fileID: 8300000, guid: ac7666c7eab460143abbee8c93513551, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e67a658393f9cb4e803828d34b1aa0c, type: 3}
 --- !u!1 &1648642398 stripped
@@ -8179,6 +8233,22 @@ PrefabInstance:
     - target: {fileID: 3708666753744549086, guid: 229e0d44347096142a8677ebbaeaafcb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: 675726617e44ba14193212301d9a1da0, type: 2}
+    - target: {fileID: 0}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.data[1].time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.data[0].value
+      value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.data[1].value
+      value: 1.1
       objectReference: {fileID: 0}
     - target: {fileID: 4721434139823974032, guid: 229e0d44347096142a8677ebbaeaafcb, type: 3}
       propertyPath: m_Name

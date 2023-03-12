@@ -9,6 +9,7 @@ struct Question {
     public bool bfinish;
     public int index;
     public int[] answers;
+    public AudioClip qClip;
 }
 
 enum PickQuestion_State { 
@@ -39,6 +40,8 @@ public class ExploreUI : MonoBehaviour
     [SerializeField] GameObject m_exploreNode;
     [SerializeField] GameObject[] m_resultView;  // PC And VR
     [SerializeField] GameObject[] m_leaveView;   // PC And VR
+    [SerializeField] AudioClip[] m_correctOrWrongClip;  // 0 for correct, 1 for wrong
+    [SerializeField] AudioClip[] m_questionClips;
 
     Question[] m_questions = new Question[Question_Amount];
 
@@ -74,6 +77,7 @@ public class ExploreUI : MonoBehaviour
                 m_questions[i].answers[j] = m_answerArray[i, j];
                 Debug.Log("AnswerArray:" + " i " + i + " j " + j + m_answerArray[i,j]);
             }
+            m_questions[i].qClip = m_questionClips[i];
         }
 
         for(int i = 0; i < m_amoutImg.Length; ++i)
@@ -167,6 +171,7 @@ public class ExploreUI : MonoBehaviour
                                 // µª¹ï
                                 Debug.Log("CheckOption:" +  m_optionIndex);
                                 m_correctHints[m_optionIndex].SetActive(true);
+                                GetComponent<AudioSource>().PlayOneShot(m_correctOrWrongClip[0]);
                                 m_optionArray.Add(m_optionIndex);
                                 m_bShowPuzzle = true;
                                 AddPuzzleAmout();
@@ -176,6 +181,7 @@ public class ExploreUI : MonoBehaviour
                         {
                             // µª¿ù
                             m_wrongHints[m_optionIndex].SetActive(true);
+                            GetComponent<AudioSource>().PlayOneShot(m_correctOrWrongClip[1]);
                         }
                         m_timer = 250;
                     }else if (m_timer < 0)
@@ -340,6 +346,8 @@ public class ExploreUI : MonoBehaviour
             return false;
         }
 
+        GameObject.Find("FollowHead").GetComponent<AudioSource>().clip = m_questions[index].qClip;
+        GameObject.Find("FollowHead").GetComponent<AudioSource>().Play();
         m_questions[index].isPicked = true;
         m_questions[index].titleObject.SetActive(true);
         m_questionIndex = index;
