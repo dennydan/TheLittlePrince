@@ -197,6 +197,7 @@ public class ExploreUI : MonoBehaviour
                         m_correctHints[m_optionIndex].SetActive(false);
                         int state = m_bShowPuzzle ? (int)PickQuestion_State.ShowPuzzle : (int)PickQuestion_State.PickOption;
                         m_bShowPuzzle = false;
+                        m_answerPool.ShowPuzzleHint(0, false);  // Close All Hint
                         m_state.NextState(state);
                     }
                 }
@@ -411,6 +412,7 @@ public class ExploreUI : MonoBehaviour
             m_amoutImg[m_puzzleAmount - 1].SetActive(false);
         }
         m_amoutImg[m_puzzleAmount].SetActive(true);
+        m_answerPool.ShowPuzzleHint(m_puzzleAmount);
         m_puzzleAmount++;
     }
 

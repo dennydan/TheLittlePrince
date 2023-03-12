@@ -19,7 +19,7 @@ public class ExploreAnswerPool : MonoBehaviour
 {
     [SerializeField] GameObject[] pf_answers;
     [SerializeField] GameObject[] m_optionNode;
-
+    [SerializeField] GameObject[] m_hints;
     private int[,] m_answerArray = new int[3,10];
     private int[] m_questionInterval = { 4, 4, 4, 5, 5, 4, 4, 4, 3, 4, 4 };
     
@@ -86,5 +86,16 @@ public class ExploreAnswerPool : MonoBehaviour
                 wrongIndex++;
             }
         }
+    }
+
+    public void ShowPuzzleHint(int index = 0, bool bVisible = true)
+    {
+        if (index < 0 || index > m_hints.Length) return;
+
+        for (int i = 0; i < m_hints.Length; ++i)
+        {
+            m_hints[i].SetActive(false);
+        }
+        m_hints[index].SetActive(bVisible);
     }
 }
