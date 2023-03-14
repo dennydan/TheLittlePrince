@@ -193,6 +193,28 @@ public class TutorialMessage : MonoBehaviour
             VRaudioSource.Stop();
         }
 
+
+        if(bEnble)
+        {
+            if(VROrigin != null)
+            {
+                //固定VR位置跟鏡頭
+                VROrigin.transform.position = VRtutorialPos;
+                VROrigin.transform.rotation = VRtutorialRot;
+                GameObject.Find("VRCamera").GetComponent<TrackedPoseDriver>().enabled = false;
+            }
+        }
+        else
+        {
+            if (VROrigin != null)
+            {
+                //復原VR位置
+                VROrigin.transform.position = VRoriginPos;
+                VROrigin.transform.rotation = VRoriginRot;
+                GameObject.Find("VRCamera").GetComponent<TrackedPoseDriver>().enabled = true;
+            }
+        }
+
         m_messageBoxs[m_messageIndex].SetActive(bEnble);
         m_messageBoxs_VR[m_messageIndex].SetActive(bEnble);
     }
@@ -228,11 +250,6 @@ public class TutorialMessage : MonoBehaviour
         SetShowMessage(false);
         if (m_countDown == null) return;
         m_countDown.GetComponent<CountDown>().Show();
-
-        //復原VR位置
-        VROrigin.transform.position = VRoriginPos;
-        VROrigin.transform.rotation = VRoriginRot;
-        GameObject.Find("VRCamera").GetComponent<TrackedPoseDriver>().enabled = true;
     }
 
     IEnumerator waitForSound(AudioClip audioClip)
