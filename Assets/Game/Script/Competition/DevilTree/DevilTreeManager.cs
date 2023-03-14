@@ -40,9 +40,13 @@ public class DevilTreeManager : MonoBehaviour
 
     [SerializeField]
     private Image m_tutorialImg;
+    [SerializeField]
+    private Image m_VRtutorialImg;
 
     [SerializeField]
     private Image m_winnerImage;
+    [SerializeField]
+    private Image m_VRwinnerImage;
 
     [SerializeField]
     private Sprite[] m_endPointSprites;
@@ -143,6 +147,7 @@ public class DevilTreeManager : MonoBehaviour
 
                         int winnerIndex = GameManager.GetWinner() == (int) LAYER.PC ? 0 : 1;
                         m_winnerImage.sprite = m_winnerSprites[winnerIndex];
+                        m_VRwinnerImage.sprite = m_winnerSprites[winnerIndex];
                         GameManager.bMissionComlete = true;
                         m_timer = 420;
                         GameManager.PC_tree = GameManager.VR_tree = 0;
@@ -203,6 +208,7 @@ public class DevilTreeManager : MonoBehaviour
         if ( randPoint < m_endPointSprites.Length)
         {
             m_tutorialImg.sprite = m_endPointSprites[randPoint];
+            m_VRtutorialImg.sprite = m_endPointSprites[randPoint];
         }
     }
 

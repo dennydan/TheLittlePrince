@@ -1610,6 +1610,7 @@ GameObject:
   m_Component:
   - component: {fileID: 316372314}
   - component: {fileID: 316372315}
+  - component: {fileID: 316372316}
   m_Layer: 0
   m_Name: ConfirmResult
   m_TagString: Untagged
@@ -1684,6 +1685,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &316372316
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 316372313}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7, y: 5, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &317815469
 GameObject:
   m_ObjectHideFlags: 0
@@ -6060,11 +6074,19 @@ PrefabInstance:
       propertyPath: m_optionSpawner.Array.data[4]
       value: 
       objectReference: {fileID: 2085802304}
+    - target: {fileID: 6385953394573555533, guid: 3e67a658393f9cb4e803828d34b1aa0c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7029024798569051277, guid: 3e67a658393f9cb4e803828d34b1aa0c, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7556698005459045181, guid: 3e67a658393f9cb4e803828d34b1aa0c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8591941424843541117, guid: 3e67a658393f9cb4e803828d34b1aa0c, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}

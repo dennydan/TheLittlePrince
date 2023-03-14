@@ -50,7 +50,7 @@ public class VR_ButtonsToPress : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Player2"))
+        if (other.CompareTag("Platform"))
         {
             staying = false;
         }
@@ -58,7 +58,7 @@ public class VR_ButtonsToPress : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag("Player2"))    //pushed!!
+        if (other.CompareTag("Platform"))    //pushed!!
         {
             staying = true;
 
