@@ -6,8 +6,8 @@ using Valve.VR.Extras;
 
 public class VR_UnlockUser : MonoBehaviour
 {
-    private VR_CheckLongPress lp;
-    private SteamVR_LaserPointer rightHandLaser;
+    public VR_CheckLongPress lp;
+    public SteamVR_LaserPointer rightHandLaser;
     bool CatchFox;
 
     private void Start()
@@ -40,7 +40,7 @@ public class VR_UnlockUser : MonoBehaviour
             Debug.Log("PC unlocked!");
             GameObject.Find("Fox").GetComponent<PlayerInput>().enabled = true;
             // There is no use for this function, Delete itself.
-            Destroy(GetComponent<VR_UnlockUser>());
+            //Destroy(GetComponent<VR_UnlockUser>());
         }
     }
 }

@@ -201,7 +201,15 @@ public class TutorialMessage : MonoBehaviour
                 //固定VR位置跟鏡頭
                 VROrigin.transform.position = VRtutorialPos;
                 VROrigin.transform.rotation = VRtutorialRot;
-                GameObject.Find("VRCamera").GetComponent<TrackedPoseDriver>().enabled = false;
+                try
+                {
+                    GameObject.Find("VRCamera").GetComponent<TrackedPoseDriver>().enabled = false;
+                }
+                catch
+                {
+                    Debug.Log("No VR Camera found in tutorialMessage");
+                }
+                
             }
         }
         else
@@ -211,7 +219,14 @@ public class TutorialMessage : MonoBehaviour
                 //復原VR位置
                 VROrigin.transform.position = VRoriginPos;
                 VROrigin.transform.rotation = VRoriginRot;
-                GameObject.Find("VRCamera").GetComponent<TrackedPoseDriver>().enabled = true;
+                try
+                {
+                    GameObject.Find("VRCamera").GetComponent<TrackedPoseDriver>().enabled = true;
+                }
+                catch
+                {
+                    Debug.Log("No VR Camera found in tutorialMessage");
+                }
             }
         }
 

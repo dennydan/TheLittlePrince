@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour
 
     public static bool competitionFinish = false;
     public static bool bMissionComlete = false;    // Current mission is done and show message.
-    public static string version = "v0.5.0";
+    public static string version = "v0.7.1";
 
     private void Awake()
     {

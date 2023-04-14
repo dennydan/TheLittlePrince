@@ -394,7 +394,7 @@ CharacterController:
   m_GameObject: {fileID: 107946}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Height: 1.5
   m_Radius: 0.5
@@ -445,7 +445,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gripAction:
-    actionPath: 
+    actionPath: /actions/default/in/GrabPinch
     needsReinit: 0
   pressTriggerTime: 2
   pressTime: 0
@@ -461,6 +461,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a78375ec1f691a48af6dc186791b155, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lp: {fileID: 1791845652}
+  rightHandLaser: {fileID: 0}
 --- !u!114 &5857932793056776239
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -819,7 +821,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4160749567
+    m_Bits: 4160749311
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -1173,7 +1175,7 @@ MonoBehaviour:
   renderModels: []
   mainRenderModel: {fileID: 0}
   hoverhighlightRenderModel: {fileID: 0}
-  showDebugText: 1
+  showDebugText: 0
   spewDebugText: 0
   showDebugInteractables: 0
 --- !u!114 &114000011273627542
@@ -1313,7 +1315,7 @@ MonoBehaviour:
   renderModels: []
   mainRenderModel: {fileID: 0}
   hoverhighlightRenderModel: {fileID: 0}
-  showDebugText: 1
+  showDebugText: 0
   spewDebugText: 0
   showDebugInteractables: 0
 --- !u!114 &114000011957598740

@@ -450,9 +450,9 @@ MonoBehaviour:
     m_Radius: 2.5
   m_LegacyHeadingBias: 3.4028235e+38
   m_Rigs:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 114930202179969292}
+  - {fileID: 114882754628555484}
+  - {fileID: 114934392785766692}
 --- !u!114 &114207486209726322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -576,7 +576,9 @@ MonoBehaviour:
   - Header
   - Extensions
   - m_Priority
+  - m_Transitions
   - m_Follow
+  - m_StandbyUpdate
   m_LockStageInInspector: 00000000
   m_StreamingVersion: 20170927
   m_Priority: 10
@@ -682,7 +684,7 @@ MonoBehaviour:
     m_MaxSpeed: 500
     m_AccelTime: 0.2
     m_DecelTime: 0.05
-    m_InputAxisName: CameraX
+    m_InputAxisName: 
     m_InputAxisValue: 0
     m_InvertInput: 1
     m_MinValue: -180
@@ -809,7 +811,7 @@ MonoBehaviour:
     m_MaxSpeed: 500
     m_AccelTime: 0.2
     m_DecelTime: 0.05
-    m_InputAxisName: CameraX
+    m_InputAxisName: 
     m_InputAxisValue: 0
     m_InvertInput: 1
     m_MinValue: -180
@@ -902,7 +904,9 @@ MonoBehaviour:
   - Header
   - Extensions
   - m_Priority
+  - m_Transitions
   - m_Follow
+  - m_StandbyUpdate
   m_LockStageInInspector: 00000000
   m_StreamingVersion: 20170927
   m_Priority: 10
@@ -1033,7 +1037,9 @@ MonoBehaviour:
   - Header
   - Extensions
   - m_Priority
+  - m_Transitions
   - m_Follow
+  - m_StandbyUpdate
   m_LockStageInInspector: 00000000
   m_StreamingVersion: 20170927
   m_Priority: 10
@@ -1105,7 +1111,9 @@ MonoBehaviour:
   - Header
   - Extensions
   - m_Priority
+  - m_Transitions
   - m_Follow
+  - m_StandbyUpdate
   m_LockStageInInspector: 00000000
   m_StreamingVersion: 20170927
   m_Priority: 10
@@ -1211,7 +1219,7 @@ MonoBehaviour:
     m_MaxSpeed: 500
     m_AccelTime: 0.2
     m_DecelTime: 0.05
-    m_InputAxisName: CameraX
+    m_InputAxisName: 
     m_InputAxisValue: 0
     m_InvertInput: 1
     m_MinValue: -180
@@ -1392,9 +1400,9 @@ MonoBehaviour:
     m_Radius: 2.5
   m_LegacyHeadingBias: 3.4028235e+38
   m_Rigs:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 114967305657094926}
+  - {fileID: 114004852802512490}
+  - {fileID: 114334222923212916}
 --- !u!114 &114018107193716048
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1578,7 +1586,9 @@ MonoBehaviour:
   - Header
   - Extensions
   - m_Priority
+  - m_Transitions
   - m_Follow
+  - m_StandbyUpdate
   m_LockStageInInspector: 00000000
   m_StreamingVersion: 20170927
   m_Priority: 10
@@ -1684,7 +1694,7 @@ MonoBehaviour:
     m_MaxSpeed: 500
     m_AccelTime: 0.2
     m_DecelTime: 0.05
-    m_InputAxisName: CameraX
+    m_InputAxisName: 
     m_InputAxisValue: 0
     m_InvertInput: 1
     m_MinValue: -180
@@ -1811,7 +1821,7 @@ MonoBehaviour:
     m_MaxSpeed: 500
     m_AccelTime: 0.2
     m_DecelTime: 0.05
-    m_InputAxisName: CameraX
+    m_InputAxisName: 
     m_InputAxisValue: 0
     m_InvertInput: 1
     m_MinValue: -180
@@ -1938,7 +1948,7 @@ MonoBehaviour:
     m_MaxSpeed: 500
     m_AccelTime: 0.2
     m_DecelTime: 0.05
-    m_InputAxisName: CameraX
+    m_InputAxisName: 
     m_InputAxisValue: 0
     m_InvertInput: 1
     m_MinValue: -180
@@ -2031,7 +2041,9 @@ MonoBehaviour:
   - Header
   - Extensions
   - m_Priority
+  - m_Transitions
   - m_Follow
+  - m_StandbyUpdate
   m_LockStageInInspector: 00000000
   m_StreamingVersion: 20170927
   m_Priority: 10

@@ -69,6 +69,8 @@ public class VR_PlayerInitialize : MonoBehaviour
                 if (GameObject.Find("New Game Object") != null)
                     GameObject.Find("New Game Object").transform.GetChild(0).gameObject.SetActive(true);
 
+                VR_player.GetComponent<VR_UnlockUser>().lp = VR_player.GetComponent<VR_CheckLongPress>();
+                VR_player.GetComponent<VR_UnlockUser>().rightHandLaser = VR_LP;
                 VR_player.GetComponent<VR_UnlockUser>().enabled = true;
             }
             else if (SceneManager.GetActiveScene().name == "SceneB_competition")
