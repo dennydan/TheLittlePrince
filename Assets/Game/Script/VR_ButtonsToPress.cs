@@ -10,6 +10,7 @@ public class VR_ButtonsToPress : MonoBehaviour
     [SerializeField]
     public float movingSpeed = 0.01f;
     public float maxMoveDistance = 7f;
+    public float movingRatio = 4f;
     public Transform obj;
     public GameObject restrictionArea;
 
@@ -25,18 +26,18 @@ public class VR_ButtonsToPress : MonoBehaviour
         {
             //button restore, upper
             if(transform.parent.localPosition.y < originPos_Btn.y)
-                transform.parent.localPosition = new Vector3(transform.parent.localPosition.x, transform.parent.localPosition.y + movingSpeed/4, transform.parent.localPosition.z);
+                transform.parent.localPosition += new Vector3(0, movingSpeed / movingRatio, 0);
 
             //obj restore
             if (obj.name == "wooden_door02")    //upper
             {
                 if(obj.localPosition.y < originPos_Obj.y)
-                    obj.localPosition = new Vector3(obj.localPosition.x, obj.localPosition.y + movingSpeed, obj.localPosition.z);
+                    obj.localPosition += new Vector3(0, movingSpeed, 0);
             }
             else if (obj.name == "house_lift_pad")  //lower
             {
                 if (obj.localPosition.y > originPos_Obj.y)
-                    obj.localPosition = new Vector3(obj.localPosition.x, obj.localPosition.y - movingSpeed*3, obj.localPosition.z);
+                    obj.localPosition -= new Vector3(0, movingSpeed * movingRatio, 0);
             }
             else
             {
@@ -63,19 +64,19 @@ public class VR_ButtonsToPress : MonoBehaviour
             staying = true;
 
             //button sink, lower
-            if (transform.parent.localPosition.y >= originPos_Btn.y - maxMoveDistance/4)
-                transform.parent.localPosition = new Vector3(transform.parent.localPosition.x, transform.parent.localPosition.y - movingSpeed/4, transform.parent.localPosition.z);
+            if (transform.parent.localPosition.y >= originPos_Btn.y - maxMoveDistance / movingRatio)
+                transform.parent.localPosition -= new Vector3(0, movingSpeed / movingRatio, 0);
 
             //obj moving
             if (obj.name == "wooden_door02")    //lower
             {
                 if (obj.localPosition.y >= originPos_Obj.y - maxMoveDistance)
-                    obj.localPosition = new Vector3(obj.localPosition.x, obj.localPosition.y - movingSpeed, obj.localPosition.z);
+                    obj.localPosition -= new Vector3(0, movingSpeed, 0);
             }
             else if (obj.name == "house_lift_pad")  //upper
             {
-                if (obj.localPosition.y <= originPos_Obj.y + maxMoveDistance*3)
-                    obj.localPosition = new Vector3(obj.localPosition.x, obj.localPosition.y + movingSpeed*3, obj.localPosition.z);
+                if (obj.localPosition.y <= originPos_Obj.y + maxMoveDistance * movingRatio)
+                    obj.localPosition += new Vector3(0, movingSpeed * movingRatio, 0);
             }
             else
             {
