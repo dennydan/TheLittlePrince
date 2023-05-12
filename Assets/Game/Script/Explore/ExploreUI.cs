@@ -162,14 +162,12 @@ public class ExploreUI : MonoBehaviour
                         
                         if (CheckAnswer(m_questionIndex))
                         {
-                            bool bPicked = false;
                             for (int i = 0; i < m_optionArray.Count; ++i)
                             {
                                 Debug.Log("m_optionArray[i]:"+ m_optionArray[i]);
 
                                 if (CheckPickedPool(m_optionIndex))
                                 {
-                                    bPicked = true;
                                     break;
                                 }
                                 else if (m_optionIndex == m_optionArray[i])
@@ -181,12 +179,8 @@ public class ExploreUI : MonoBehaviour
                                     AddPuzzleAmout();
                                 }
                             }
-
-                            if (bPicked == false)
-                            {
-                                // Right
-                                m_correctHints[m_optionIndex].SetActive(true);
-                            }
+                            // Right
+                            m_correctHints[m_optionIndex].SetActive(true);
                         }
                         else
                         {
