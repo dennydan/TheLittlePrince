@@ -52,6 +52,8 @@ public class ExploreUI : MonoBehaviour
     private int[,] m_answerArray = { {0,2,4},{0,3,4},{1,2,4},{0,1,2},{1,2,3},
                                  {0,1,2},{1,2,3},{1,3,4},{1,2,4},{0,1,3}};
 
+    private List<int> m_pickedPool = new List<int>();
+
     private int m_puzzleAmount = 0;
     private int m_timer = 0;
     private bool m_bShowPuzzle = false;
@@ -126,6 +128,7 @@ public class ExploreUI : MonoBehaviour
                         Debug.Log("PickQuestion_State.Start");
                         m_exploreNode.transform.localScale = new Vector3(1, 1, 1);
                         m_optionArray.Clear();
+                        m_pickedPool.Clear();
                         CloseAllTitles();
 
                         if (PickQuestion(Random.Range(0, Question_Amount - 1)))
@@ -163,23 +166,31 @@ public class ExploreUI : MonoBehaviour
                             for (int i = 0; i < m_optionArray.Count; ++i)
                             {
                                 Debug.Log("m_optionArray[i]:"+ m_optionArray[i]);
-                                bPicked = m_optionIndex == m_optionArray[i];
+
+                                if (CheckPickedPool(m_optionIndex))
+                                {
+                                    bPicked = true;
+                                    break;
+                                }
+                                else if (m_optionIndex == m_optionArray[i])
+                                {
+                                    m_pickedPool.Add(m_optionIndex);
+                                    GetComponent<AudioSource>().PlayOneShot(m_correctOrWrongClip[0]);
+                                    m_optionArray.Add(m_optionIndex);
+                                    m_bShowPuzzle = true;
+                                    AddPuzzleAmout();
+                                }
                             }
 
                             if (bPicked == false)
                             {
-                                // µª¹ï
-                                Debug.Log("CheckOption:" +  m_optionIndex);
+                                // Right
                                 m_correctHints[m_optionIndex].SetActive(true);
-                                GetComponent<AudioSource>().PlayOneShot(m_correctOrWrongClip[0]);
-                                m_optionArray.Add(m_optionIndex);
-                                m_bShowPuzzle = true;
-                                AddPuzzleAmout();
                             }
                         }
                         else
                         {
-                            // µª¿ù
+                            // Wrong
                             m_wrongHints[m_optionIndex].SetActive(true);
                             GetComponent<AudioSource>().PlayOneShot(m_correctOrWrongClip[1]);
                         }
@@ -231,7 +242,7 @@ public class ExploreUI : MonoBehaviour
                     if (m_state.IsEntering())
                     {
                         Debug.Log("PickQuestion_State.AddPuzzle");
-                        // TODO Random Puzzle
+                        // Random Puzzle
                         int puzzleIndex = Random.Range(1, PUZZLE_MAX);
                         if (m_puzzles[puzzleIndex].activeSelf)
                         {
@@ -443,5 +454,17 @@ public class ExploreUI : MonoBehaviour
     public void Leave()
     {
         SceneManager.LoadScene("SceneStart");
+    }
+
+    private bool CheckPickedPool(int answer)
+    {
+        for(int i = 0; i < m_pickedPool.Count; ++i)
+        {
+            if(answer == m_pickedPool[i])
+            {
+                return true;
+            }
+        }
+        return false;
     }
 }
