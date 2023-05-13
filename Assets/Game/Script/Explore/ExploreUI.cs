@@ -162,28 +162,25 @@ public class ExploreUI : MonoBehaviour
                         
                         if (CheckAnswer(m_questionIndex))
                         {
+                            bool bPicked = false;
                             for (int i = 0; i < m_optionArray.Count; ++i)
                             {
                                 Debug.Log("m_optionArray[i]:"+ m_optionArray[i]);
-
-                                if (m_optionIndex == m_optionArray[i])
-                                {
-                                    if (CheckPickedPool(m_optionIndex))
-                                    {
-                                        break;
-                                    }
-                                    else
-                                    {
-                                        m_pickedPool.Add(m_optionIndex);
-                                        m_optionArray.Add(m_optionIndex);
-                                        m_bShowPuzzle = true;
-                                        AddPuzzleAmout();
-                                    }
-                                }
+                                bPicked = m_optionIndex == m_optionArray[i];
                             }
                             // Right
-                            m_correctHints[m_optionIndex].SetActive(true);
-                            GetComponent<AudioSource>().PlayOneShot(m_correctOrWrongClip[0]);
+                            if(bPicked == false)
+                            {
+                                if (CheckPickedPool(m_optionIndex) == false)
+                                {
+                                    m_pickedPool.Add(m_optionIndex);
+                                    m_optionArray.Add(m_optionIndex);
+                                    m_bShowPuzzle = true;
+                                    AddPuzzleAmout();
+                                }
+                                m_correctHints[m_optionIndex].SetActive(true);
+                                GetComponent<AudioSource>().PlayOneShot(m_correctOrWrongClip[0]);
+                            }
                         }
                         else
                         {
