@@ -166,21 +166,24 @@ public class ExploreUI : MonoBehaviour
                             {
                                 Debug.Log("m_optionArray[i]:"+ m_optionArray[i]);
 
-                                if (CheckPickedPool(m_optionIndex))
+                                if (m_optionIndex == m_optionArray[i])
                                 {
-                                    break;
-                                }
-                                else if (m_optionIndex == m_optionArray[i])
-                                {
-                                    m_pickedPool.Add(m_optionIndex);
-                                    GetComponent<AudioSource>().PlayOneShot(m_correctOrWrongClip[0]);
-                                    m_optionArray.Add(m_optionIndex);
-                                    m_bShowPuzzle = true;
-                                    AddPuzzleAmout();
+                                    if (CheckPickedPool(m_optionIndex))
+                                    {
+                                        break;
+                                    }
+                                    else
+                                    {
+                                        m_pickedPool.Add(m_optionIndex);
+                                        m_optionArray.Add(m_optionIndex);
+                                        m_bShowPuzzle = true;
+                                        AddPuzzleAmout();
+                                    }
                                 }
                             }
                             // Right
                             m_correctHints[m_optionIndex].SetActive(true);
+                            GetComponent<AudioSource>().PlayOneShot(m_correctOrWrongClip[0]);
                         }
                         else
                         {
